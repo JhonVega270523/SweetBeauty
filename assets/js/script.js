@@ -413,6 +413,28 @@ scrollToTopBtn.addEventListener('click', function() {
     }
 });
 
+// Botón flotante de WhatsApp
+const whatsappBtn = document.getElementById('whatsappBtn');
+const whatsappOptions = document.getElementById('whatsappOptions');
+
+if (whatsappBtn && whatsappOptions) {
+    whatsappBtn.addEventListener('click', function() {
+        whatsappOptions.classList.toggle('show');
+    });
+
+    // Cerrar opciones al hacer clic fuera
+    document.addEventListener('click', function(e) {
+        if (!whatsappBtn.contains(e.target) && !whatsappOptions.contains(e.target)) {
+            whatsappOptions.classList.remove('show');
+        }
+    });
+}
+
+function abrirWhatsApp(numero) {
+    window.open(`https://wa.me/${numero}`, '_blank');
+    whatsappOptions.classList.remove('show');
+}
+
 // Sistema de calificación con estrellas
 document.addEventListener('DOMContentLoaded', function() {
     cargarProductos();
