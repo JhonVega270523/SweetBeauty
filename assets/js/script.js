@@ -218,8 +218,23 @@ function abrirModalPedido(productoId) {
         document.getElementById('productoPrecio').value = `$${producto.precio.toLocaleString('es-CO')}`;
         document.getElementById('cantidad').value = 1;
         
+        // Calcular precio total inicial
+        calcularPrecioTotal();
+        
         modal.style.display = 'flex';
     }
+}
+
+function calcularPrecioTotal() {
+    const precioUnitario = document.getElementById('productoPrecio').value;
+    const cantidad = parseInt(document.getElementById('cantidad').value) || 1;
+    
+    // Extraer el precio numérico del string (remover $ y cualquier separador)
+    const precioNumerico = parseFloat(precioUnitario.replace(/[$,.]/g, ''));
+    const total = precioNumerico * cantidad;
+    
+    // Formatear con separadores de miles usando el mismo formato que el precio unitario
+    document.getElementById('precioTotal').value = `$${total.toLocaleString('es-CO')}`;
 }
 
 function cerrarModal() {
@@ -240,6 +255,14 @@ if (closePedidoModal) {
     closePedidoModal.addEventListener('click', cerrarModal);
 }
 
+// Event listener para calcular total cuando cambie la cantidad
+document.addEventListener('DOMContentLoaded', function() {
+    const cantidadInput = document.getElementById('cantidad');
+    if (cantidadInput) {
+        cantidadInput.addEventListener('input', calcularPrecioTotal);
+    }
+});
+
 // Event listeners para modal de pedido
 // Event listeners para modales personalizados
 btnConfirmacion.addEventListener('click', cerrarConfirmacion);
@@ -257,6 +280,7 @@ form.addEventListener('submit', function(e) {
     const productoDescripcion = document.getElementById('productoDescripcion').value;
     const productoPrecio = document.getElementById('productoPrecio').value;
     const cantidad = document.getElementById('cantidad').value;
+    const precioTotal = document.getElementById('precioTotal').value;
     const clienteNombre = document.getElementById('clienteNombre').value;
     const clienteTelefono = document.getElementById('clienteTelefono').value;
     const clienteDireccion = document.getElementById('clienteDireccion').value;
@@ -265,8 +289,9 @@ form.addEventListener('submit', function(e) {
     const mensaje = `¡Hola! Quiero realizar un pedido en Sweet Beauty:%0A%0A` +
                     `*Producto:* ${productoNombre}%0A` +
                     `*Descripción:* ${productoDescripcion}%0A` +
-                    `*Precio:* ${productoPrecio}%0A` +
-                    `*Cantidad:* ${cantidad}%0A%0A` +
+                    `*Precio Unitario:* ${productoPrecio}%0A` +
+                    `*Cantidad:* ${cantidad}%0A` +
+                    `*Total:* ${precioTotal}%0A%0A` +
                     `*Mis datos:*%0A` +
                     `- Nombre: ${clienteNombre}%0A` +
                     `- Teléfono: ${clienteTelefono}%0A` +
