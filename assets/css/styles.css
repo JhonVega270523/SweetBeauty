@@ -794,9 +794,45 @@ footer {
 }
 
 .footer-bottom {
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding-top: 15px;
     border-top: 1px solid rgba(255, 255, 255, 0.3);
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.footer-left {
+    text-align: left;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+.footer-bottom a {
+    color: var(--blanco);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-bottom a:hover {
+    color: #f3e5f5;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 5px;
+    }
+    
+    .footer-left,
+    .footer-right {
+        text-align: center;
+    }
 }
 
 /* Botón Scroll to Top */
