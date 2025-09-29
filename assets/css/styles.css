@@ -870,7 +870,7 @@ footer {
     font-size: 1.5rem;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     transition: all 0.3s;
-    z-index: 1000;
+    z-index: 1001;
     display: none;
 }
 
@@ -915,8 +915,8 @@ footer {
 
 .whatsapp-options {
     position: absolute;
-    bottom: 70px;
-    right: 0;
+    bottom: 0;
+    right: 70px;
     background: white;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -924,14 +924,14 @@ footer {
     min-width: 150px;
     opacity: 0;
     visibility: hidden;
-    transform: translateY(10px);
+    transform: translateX(10px);
     transition: all 0.3s ease;
 }
 
 .whatsapp-options.show {
     opacity: 1;
     visibility: visible;
-    transform: translateY(0);
+    transform: translateX(0);
 }
 
 .whatsapp-option {
@@ -978,20 +978,43 @@ footer {
     .scroll-to-top {
         bottom: 80px;
         right: 20px;
+        width: 50px;
+        height: 50px;
     }
     
     .whatsapp-float {
         bottom: 20px;
         right: 20px;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     
     .whatsapp-btn {
         width: 50px;
         height: 50px;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        top: 0;
+        left: 0;
     }
     
     .whatsapp-options {
         min-width: 180px;
+        bottom: 0;
+        right: 70px;
+        transform: translateX(10px);
+    }
+    
+    .whatsapp-options.show {
+        transform: translateX(0);
+    }
+    
+    .social-icon {
+        text-align: center;
     }
 }
 
@@ -1255,11 +1278,30 @@ footer {
     
     /* Scroll to top */
     .scroll-to-top {
+        bottom: 80px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        font-size: 1.3rem;
+        z-index: 1001;
+    }
+    
+    .whatsapp-float {
         bottom: 20px;
         right: 20px;
-        width: 45px;
-        height: 45px;
-        font-size: 1.3rem;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .whatsapp-btn {
+        margin: 0;
+        padding: 0;
+        position: relative;
+        top: 0;
+        left: 0;
     }
 }
 
@@ -1497,11 +1539,30 @@ footer {
     }
     
     .scroll-to-top {
+        bottom: 80px;
+        right: 15px;
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+        z-index: 1001;
+    }
+    
+    .whatsapp-float {
         bottom: 15px;
         right: 15px;
-        width: 40px;
-        height: 40px;
-        font-size: 1.2rem;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .whatsapp-btn {
+        margin: 0;
+        padding: 0;
+        position: relative;
+        top: 0;
+        left: 0;
     }
 }
 
