@@ -287,6 +287,10 @@ form.addEventListener('submit', function(e) {
     const clienteCiudad = document.getElementById('clienteCiudad').value;
     const clienteReferencia = document.getElementById('clienteReferencia').value;
     
+    // Debug: verificar que los valores se están capturando
+    console.log('Ciudad:', clienteCiudad);
+    console.log('Referencia:', clienteReferencia);
+    
     // Crear mensaje para WhatsApp
     const mensaje = `¡Hola! Quiero realizar un pedido en Sweet Beauty:%0A%0A` +
                     `*Producto:* ${productoNombre}%0A` +
@@ -301,6 +305,9 @@ form.addEventListener('submit', function(e) {
                     `- Ciudad/Barrio: ${clienteCiudad}%0A` +
                     `- Punto de Referencia: ${clienteReferencia || 'No especificado'}%0A%0A` +
                     `Por favor, confirmen mi pedido. ¡Gracias!`;
+    
+    // Debug: mostrar el mensaje completo
+    console.log('Mensaje completo:', mensaje);
     
     // Número de WhatsApp (reemplazar con el número real)
     const numeroWhatsApp = "3003024889";
