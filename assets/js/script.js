@@ -169,6 +169,7 @@ const btnComprarModal = document.getElementById('btnComprarModal');
 // Modal de pedido
 const modal = document.getElementById('pedidoModal');
 const closeBtn = document.querySelector('.close');
+const closePedidoModal = document.getElementById('closePedidoModal');
 const cancelBtn = document.querySelector('.btn-cancelar');
 const form = document.getElementById('formPedido');
 
@@ -235,6 +236,11 @@ btnComprarModal.addEventListener('click', function() {
 });
 
 // Event listeners para modal de pedido
+if (closePedidoModal) {
+    closePedidoModal.addEventListener('click', cerrarModal);
+}
+
+// Event listeners para modal de pedido
 // Event listeners para modales personalizados
 btnConfirmacion.addEventListener('click', cerrarConfirmacion);
 btnError.addEventListener('click', cerrarError);
@@ -268,7 +274,7 @@ form.addEventListener('submit', function(e) {
                     `Por favor, confirmen mi pedido. ¡Gracias!`;
     
     // Número de WhatsApp (reemplazar con el número real)
-    const numeroWhatsApp = "1234567890";
+    const numeroWhatsApp = "3003024889";
     
     // Abrir WhatsApp
     window.open(`https://wa.me/${numeroWhatsApp}?text=${mensaje}`, '_blank');
@@ -298,12 +304,74 @@ window.addEventListener('scroll', function() {
     }
 });
 
+// Función para scroll suave en modales
+function smoothScrollToTop(element) {
+    console.log('Iniciando scroll suave en modal');
+    console.log('Elemento:', element);
+    console.log('Scroll top actual:', element.scrollTop);
+    
+    // Intentar primero con scrollTo si está disponible
+    if (element.scrollTo) {
+        console.log('Usando scrollTo nativo');
+        element.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+        return;
+    }
+    
+    // Fallback con animación personalizada
+    const targetPosition = 0;
+    const startPosition = element.scrollTop;
+    const distance = startPosition - targetPosition;
+    const duration = 500; // 500ms como la página
+    let start = null;
+
+    function animation(currentTime) {
+        if (start === null) start = currentTime;
+        const timeElapsed = currentTime - start;
+        const run = easeInOutQuad(timeElapsed, startPosition, distance, duration);
+        element.scrollTop = run;
+        if (timeElapsed < duration) requestAnimationFrame(animation);
+    }
+
+    function easeInOutQuad(t, b, c, d) {
+        t /= d / 2;
+        if (t < 1) return c / 2 * t * t + b;
+        t--;
+        return -c / 2 * (t * (t - 2) - 1) + b;
+    }
+
+    requestAnimationFrame(animation);
+}
+
 // Funcionalidad del botón
 scrollToTopBtn.addEventListener('click', function() {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
+    // Verificar si hay algún modal abierto
+    const modalesAbiertos = document.querySelectorAll('.modal[style*="flex"]');
+    console.log('Modales abiertos:', modalesAbiertos.length);
+    
+    if (modalesAbiertos.length > 0) {
+        // Si hay modales abiertos, hacer scroll suave en el contenido del modal
+        modalesAbiertos.forEach(modal => {
+            const modalContent = modal.querySelector('.modal-content');
+            console.log('Modal content encontrado:', modalContent);
+            console.log('Scroll height:', modalContent ? modalContent.scrollHeight : 'N/A');
+            console.log('Client height:', modalContent ? modalContent.clientHeight : 'N/A');
+            
+            if (modalContent) {
+                // Hacer scroll independientemente del tamaño del contenido
+                smoothScrollToTop(modalContent);
+            }
+        });
+    } else {
+        // Si no hay modales abiertos, hacer scroll en la página
+        console.log('Haciendo scroll en la página');
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
 });
 
 // Sistema de calificación con estrellas
@@ -416,5 +484,37 @@ document.getElementById('formularioCalificacion').addEventListener('submit', fun
         // Rehabilitar botón
         botonEnviar.disabled = false;
         botonEnviar.textContent = 'Enviar Calificación';
+    });
+});
+
+// Funciones para el modal del logo
+function abrirModalLogo() {
+    const logoModal = document.getElementById('logoModal');
+    logoModal.style.display = 'flex';
+    document.body.style.overflow = 'hidden'; // Prevenir scroll del body
+}
+
+function cerrarModalLogo() {
+    const logoModal = document.getElementById('logoModal');
+    logoModal.style.display = 'none';
+    document.body.style.overflow = 'auto'; // Restaurar scroll del body
+}
+
+// Event listeners para el modal del logo
+document.addEventListener('DOMContentLoaded', function() {
+    const logoModal = document.getElementById('logoModal');
+    
+    // Cerrar modal al hacer clic en cualquier parte
+    if (logoModal) {
+        logoModal.addEventListener('click', function(e) {
+            cerrarModalLogo();
+        });
+    }
+    
+    // Cerrar modal con tecla Escape
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && logoModal.style.display === 'flex') {
+            cerrarModalLogo();
+        }
     });
 });

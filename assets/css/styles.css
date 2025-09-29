@@ -245,12 +245,12 @@ nav ul li a:hover {
     height: 100%;
     object-fit: cover;
     object-position: center;
+    border-radius: 8px;
 }
 
 .pb-image {
     background-color: white;
     padding: 10px;
-    border-radius: 8px;
 }
 
 .categoria-info {
@@ -511,19 +511,27 @@ nav ul li a:hover {
     color: #9c27b0;
     background: none;
     border: none;
-    padding: 5px;
+    padding: 0;
     border-radius: 50%;
     width: 40px;
     height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.3s;
+    transition: all 0.3s ease;
+    position: relative;
+    line-height: 1;
 }
 
 .close:hover {
     background-color: #f3e5f5;
     color: #9c27b0;
+    transform: scale(1.1);
+    line-height: 1;
+}
+
+.close:active {
+    transform: scale(0.95);
 }
 
 .form-group {
@@ -727,6 +735,32 @@ nav ul li a:hover {
     color: #666;
 }
 
+/* Modal del Logo */
+.logo-modal-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    background: none;
+    border: none;
+    box-shadow: none;
+}
+
+.logo-large {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+    object-fit: cover;
+}
+
+.logo-large:hover {
+    transform: scale(1.1);
+}
+
 /* Footer */
 footer {
     background: var(--rosa-pastel);
@@ -874,12 +908,13 @@ footer {
         top: 100%;
         left: 0;
         right: 0;
-        background: linear-gradient(135deg, var(--rosa-pastel), var(--morado-pastel));
+        background: var(--rosa-pastel);
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         transform: translateY(-100%);
         opacity: 0;
         visibility: hidden;
         transition: all 0.3s ease;
+        z-index: 999;
     }
     
     .nav-menu.active {
@@ -891,7 +926,7 @@ footer {
     .nav-menu ul {
         flex-direction: column;
         align-items: center;
-        padding: 20px 0;
+        padding: 40px 0 20px 0;
     }
     
     .nav-menu ul li {
@@ -994,10 +1029,10 @@ footer {
     
     /* Modal */
     .modal-content {
-        width: 95%;
-        padding: 25px;
-        margin: 20px;
-        max-height: 90vh;
+        width: 90%;
+        padding: 35px;
+        margin: 30px;
+        max-height: 85vh;
     }
     
     .modal-logo {
@@ -1243,10 +1278,10 @@ footer {
     }
     
     .modal-content {
-        width: 98%;
-        padding: 20px;
-        margin: 10px;
-        max-height: 95vh;
+        width: 95%;
+        padding: 30px;
+        margin: 20px;
+        max-height: 90vh;
     }
     
     .modal-logo {
@@ -1256,6 +1291,11 @@ footer {
     
     .modal-header h3 {
         font-size: 1.3rem;
+    }
+    
+    .logo-large {
+        width: 250px;
+        height: 250px;
     }
     
     .form-group input, .form-group textarea {

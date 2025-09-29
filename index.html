@@ -12,7 +12,7 @@
     <header>
         <div class="container">
             <div class="logo">
-                <img src="assets/images/logo.jpg" alt="Sweet Beauty Logo" class="logo-img">
+                <img src="assets/images/logo.jpg" alt="Sweet Beauty Logo" class="logo-img" onclick="abrirModalLogo()" style="cursor: pointer;">
                 <h1>Sweet Beauty</h1>
             </div>
             <button class="menu-toggle" id="menuToggle">
@@ -246,7 +246,7 @@
                     <img src="assets/images/logo.jpg" alt="Sweet Beauty Logo" class="modal-logo">
                     <h3>Realizar Pedido</h3>
                 </div>
-                <span class="close">&times;</span>
+                <span class="close" id="closePedidoModal">&times;</span>
             </div>
             <form id="formPedido">
                 <div class="form-group">
@@ -282,6 +282,13 @@
                     <button type="submit" class="btn-confirmar">Enviar a WhatsApp</button>
                 </div>
             </form>
+        </div>
+    </div>
+
+    <!-- Modal para mostrar logo más grande -->
+    <div class="modal" id="logoModal">
+        <div class="logo-modal-content">
+            <img src="assets/images/logo.jpg" alt="Sweet Beauty Logo" class="logo-large">
         </div>
     </div>
 
