@@ -253,6 +253,15 @@ nav ul li a:hover {
     padding: 10px;
 }
 
+.categoria-emoji {
+    font-size: 4rem;
+    color: var(--morado-pastel);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
 .categoria-info {
     padding: 20px;
     text-align: center;

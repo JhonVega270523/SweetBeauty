@@ -1,23 +1,8 @@
 // Datos de productos (simulando base de datos)
 const productos = [
+    // Lencería
     {
         id: 1,
-        nombre: "Kit de Maquillaje Profesional",
-        descripcion: "Kit completo con sombras, labiales y base de alta calidad.",
-        precio: 189000,
-        categoria: "belleza",
-        imagen: "💄"
-    },
-    {
-        id: 2,
-        nombre: "Collar de Perlas Elegante",
-        descripcion: "Collar de perlas naturales con dije de plata.",
-        precio: 125000,
-        categoria: "accesorios",
-        imagen: "📿"
-    },
-    {
-        id: 3,
         nombre: "Conjunto de Lencería Seda",
         descripcion: "Conjunto de lencería en seda natural, cómodo y elegante.",
         precio: 165000,
@@ -25,28 +10,97 @@ const productos = [
         imagen: "👙"
     },
     {
-        id: 4,
-        nombre: "Serum Facial Hidratante",
-        descripcion: "Serum con ácido hialurónico para una piel radiante.",
-        precio: 95000,
-        categoria: "belleza",
-        imagen: "🧴"
+        id: 2,
+        nombre: "Set de Ropa Interior Elegante",
+        descripcion: "Set completo de ropa interior con encaje y detalles delicados.",
+        precio: 89000,
+        categoria: "lenceria",
+        imagen: "🩱"
+    },
+    // Perfumes
+    {
+        id: 3,
+        nombre: "Perfume Floral Exclusivo",
+        descripcion: "Fragancia floral suave y duradera para el día a día.",
+        precio: 125000,
+        categoria: "perfumes",
+        imagen: "🌸"
     },
     {
+        id: 4,
+        nombre: "Eau de Parfum Nocturno",
+        descripcion: "Fragancia intensa y seductora para ocasiones especiales.",
+        precio: 180000,
+        categoria: "perfumes",
+        imagen: "🌙"
+    },
+    // Accesorios
+    {
         id: 5,
+        nombre: "Collar de Perlas Elegante",
+        descripcion: "Collar de perlas naturales con dije de plata.",
+        precio: 125000,
+        categoria: "accesorios",
+        imagen: "📿"
+    },
+    {
+        id: 6,
         nombre: "Bolso de Mano Trendy",
         descripcion: "Bolso de mano con diseño moderno y espacio amplio.",
         precio: 145000,
         categoria: "accesorios",
         imagen: "👜"
     },
+    // Maquillaje
     {
-        id: 6,
+        id: 7,
+        nombre: "Kit de Maquillaje Profesional",
+        descripcion: "Kit completo con sombras, labiales y base de alta calidad.",
+        precio: 189000,
+        categoria: "maquillaje",
+        imagen: "💄"
+    },
+    {
+        id: 8,
+        nombre: "Paleta de Sombras Premium",
+        descripcion: "Paleta con 12 sombras de colores neutros y vibrantes.",
+        precio: 95000,
+        categoria: "maquillaje",
+        imagen: "🎨"
+    },
+    // Pijamas
+    {
+        id: 9,
         nombre: "Pijama de Seda Comfort",
         descripcion: "Pijama de seda suave para noches cómodas y elegantes.",
         precio: 210000,
-        categoria: "lenceria",
+        categoria: "pijamas",
         imagen: "👘"
+    },
+    {
+        id: 10,
+        nombre: "Conjunto Pijama Algodón",
+        descripcion: "Pijama de algodón 100% orgánico, cómodo y transpirable.",
+        precio: 75000,
+        categoria: "pijamas",
+        imagen: "🛌"
+    },
+    // Vestidos de Baño
+    {
+        id: 11,
+        nombre: "Bikini Elegante",
+        descripcion: "Bikini de dos piezas con diseño moderno y ajuste perfecto.",
+        precio: 135000,
+        categoria: "vestidos-bano",
+        imagen: "👙"
+    },
+    {
+        id: 12,
+        nombre: "Traje de Baño Entero",
+        descripcion: "Traje de baño de una pieza con corte clásico y elegante.",
+        precio: 155000,
+        categoria: "vestidos-bano",
+        imagen: "🏊‍♀️"
     }
 ];
 

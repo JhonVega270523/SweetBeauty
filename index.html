@@ -48,24 +48,6 @@
         <div class="container">
             <h2>Nuestras Categorías</h2>
             <div class="categoria-grid">
-                <div class="categoria-card" onclick="navegarACategoria('belleza')">
-                    <div class="categoria-img">
-                        <img src="assets/images/PB.png" alt="Productos de Belleza" class="categoria-image pb-image">
-                    </div>
-                    <div class="categoria-info">
-                        <h3>Productos de Belleza</h3>
-                        <p>Maquillaje, skincare y productos para el cuidado personal.</p>
-                    </div>
-                </div>
-                <div class="categoria-card" onclick="navegarACategoria('accesorios')">
-                    <div class="categoria-img">
-                        <img src="assets/images/AB.png" alt="Accesorios de Belleza" class="categoria-image">
-                    </div>
-                    <div class="categoria-info">
-                        <h3>Accesorios de Belleza</h3>
-                        <p>Joyería, bolsos y complementos para completar tu look.</p>
-                    </div>
-                </div>
                 <div class="categoria-card" onclick="navegarACategoria('lenceria')">
                     <div class="categoria-img">
                         <img src="assets/images/L.jpg" alt="Lencería" class="categoria-image">
@@ -73,6 +55,51 @@
                     <div class="categoria-info">
                         <h3>Lencería</h3>
                         <p>Ropa interior elegante y cómoda para sentirte segura.</p>
+                    </div>
+                </div>
+                <div class="categoria-card" onclick="navegarACategoria('perfumes')">
+                    <div class="categoria-img">
+                        <div class="categoria-emoji">🌸</div>
+                    </div>
+                    <div class="categoria-info">
+                        <h3>Perfumes</h3>
+                        <p>Fragancias exclusivas para realzar tu personalidad.</p>
+                    </div>
+                </div>
+                <div class="categoria-card" onclick="navegarACategoria('accesorios')">
+                    <div class="categoria-img">
+                        <img src="assets/images/AB.png" alt="Accesorios de Belleza" class="categoria-image">
+                    </div>
+                    <div class="categoria-info">
+                        <h3>Accesorios</h3>
+                        <p>Joyería, bolsos y complementos para completar tu look.</p>
+                    </div>
+                </div>
+                <div class="categoria-card" onclick="navegarACategoria('maquillaje')">
+                    <div class="categoria-img">
+                        <img src="assets/images/PB.png" alt="Maquillaje" class="categoria-image pb-image">
+                    </div>
+                    <div class="categoria-info">
+                        <h3>Maquillaje</h3>
+                        <p>Productos de maquillaje profesional para resaltar tu belleza.</p>
+                    </div>
+                </div>
+                <div class="categoria-card" onclick="navegarACategoria('pijamas')">
+                    <div class="categoria-img">
+                        <div class="categoria-emoji">👘</div>
+                    </div>
+                    <div class="categoria-info">
+                        <h3>Pijamas</h3>
+                        <p>Pijamas cómodos y elegantes para descansar en casa.</p>
+                    </div>
+                </div>
+                <div class="categoria-card" onclick="navegarACategoria('vestidos-bano')">
+                    <div class="categoria-img">
+                        <div class="categoria-emoji">👙</div>
+                    </div>
+                    <div class="categoria-info">
+                        <h3>Vestidos de Baño</h3>
+                        <p>Bikinis y trajes de baño para lucir radiante en el agua.</p>
                     </div>
                 </div>
             </div>
@@ -92,9 +119,12 @@
                     <!-- Filtros de categoría -->
                     <div class="filtros">
                         <button class="filtro-btn active" data-categoria="todos">Todos</button>
-                        <button class="filtro-btn" data-categoria="belleza">Belleza</button>
-                        <button class="filtro-btn" data-categoria="accesorios">Accesorios</button>
                         <button class="filtro-btn" data-categoria="lenceria">Lencería</button>
+                        <button class="filtro-btn" data-categoria="perfumes">Perfumes</button>
+                        <button class="filtro-btn" data-categoria="accesorios">Accesorios</button>
+                        <button class="filtro-btn" data-categoria="maquillaje">Maquillaje</button>
+                        <button class="filtro-btn" data-categoria="pijamas">Pijamas</button>
+                        <button class="filtro-btn" data-categoria="vestidos-bano">Vestidos de Baño</button>
                     </div>
                     
                     <!-- Filtro de precio -->
@@ -159,12 +189,18 @@
                             <label for="productoCalificacion">Producto Calificado</label>
                             <select id="productoCalificacion" name="producto" required>
                                 <option value="">Selecciona un producto</option>
-                                <option value="Kit de Maquillaje Profesional">Kit de Maquillaje Profesional</option>
-                                <option value="Collar de Perlas Elegante">Collar de Perlas Elegante</option>
                                 <option value="Conjunto de Lencería Seda">Conjunto de Lencería Seda</option>
-                                <option value="Serum Facial Hidratante">Serum Facial Hidratante</option>
+                                <option value="Set de Ropa Interior Elegante">Set de Ropa Interior Elegante</option>
+                                <option value="Perfume Floral Exclusivo">Perfume Floral Exclusivo</option>
+                                <option value="Eau de Parfum Nocturno">Eau de Parfum Nocturno</option>
+                                <option value="Collar de Perlas Elegante">Collar de Perlas Elegante</option>
                                 <option value="Bolso de Mano Trendy">Bolso de Mano Trendy</option>
+                                <option value="Kit de Maquillaje Profesional">Kit de Maquillaje Profesional</option>
+                                <option value="Paleta de Sombras Premium">Paleta de Sombras Premium</option>
                                 <option value="Pijama de Seda Comfort">Pijama de Seda Comfort</option>
+                                <option value="Conjunto Pijama Algodón">Conjunto Pijama Algodón</option>
+                                <option value="Bikini Elegante">Bikini Elegante</option>
+                                <option value="Traje de Baño Entero">Traje de Baño Entero</option>
                                 <option value="Otro">Otro</option>
                             </select>
                         </div>
