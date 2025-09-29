@@ -292,19 +292,22 @@ form.addEventListener('submit', function(e) {
     console.log('Referencia:', clienteReferencia);
     
     // Crear mensaje para WhatsApp
-    const mensaje = `¡Hola! Quiero realizar un pedido en Sweet Beauty:%0A%0A` +
-                    `*Producto:* ${productoNombre}%0A` +
-                    `*Descripción:* ${productoDescripcion}%0A` +
-                    `*Precio Unitario:* ${productoPrecio}%0A` +
-                    `*Cantidad:* ${cantidad}%0A` +
-                    `*Total:* ${precioTotal}%0A%0A` +
-                    `*Mis datos:*%0A` +
-                    `- Nombre: ${clienteNombre}%0A` +
-                    `- Teléfono: ${clienteTelefono}%0A` +
-                    `- Dirección: ${clienteDireccion}%0A` +
-                    `- Ciudad/Barrio: ${clienteCiudad}%0A` +
-                    `- Punto de Referencia: ${clienteReferencia || 'No especificado'}%0A%0A` +
-                    `Por favor, confirmen mi pedido. ¡Gracias!`;
+    let mensaje = `¡Hola! Quiero realizar un pedido en Sweet Beauty:\n\n`;
+    mensaje += `*Producto:* ${productoNombre}\n`;
+    mensaje += `*Descripción:* ${productoDescripcion}\n`;
+    mensaje += `*Precio Unitario:* ${productoPrecio}\n`;
+    mensaje += `*Cantidad:* ${cantidad}\n`;
+    mensaje += `*Total:* ${precioTotal}\n\n`;
+    mensaje += `*Mis datos:*\n`;
+    mensaje += `- Nombre: ${clienteNombre}\n`;
+    mensaje += `- Teléfono: ${clienteTelefono}\n`;
+    mensaje += `- Dirección: ${clienteDireccion}\n`;
+    mensaje += `- Ciudad/Barrio: ${clienteCiudad}\n`;
+    mensaje += `- Punto de Referencia: ${clienteReferencia || 'No especificado'}\n\n`;
+    mensaje += `Por favor, confirmen mi pedido. ¡Gracias!`;
+    
+    // Codificar para URL
+    const mensajeCodificado = encodeURIComponent(mensaje);
     
     // Debug: mostrar el mensaje completo
     console.log('Mensaje completo:', mensaje);
@@ -313,7 +316,7 @@ form.addEventListener('submit', function(e) {
     const numeroWhatsApp = "3003024889";
     
     // Abrir WhatsApp
-    window.open(`https://wa.me/${numeroWhatsApp}?text=${mensaje}`, '_blank');
+    window.open(`https://wa.me/${numeroWhatsApp}?text=${mensajeCodificado}`, '_blank');
     
     cerrarModal();
 });
