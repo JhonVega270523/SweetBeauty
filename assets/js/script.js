@@ -284,6 +284,8 @@ form.addEventListener('submit', function(e) {
     const clienteNombre = document.getElementById('clienteNombre').value;
     const clienteTelefono = document.getElementById('clienteTelefono').value;
     const clienteDireccion = document.getElementById('clienteDireccion').value;
+    const clienteCiudad = document.getElementById('clienteCiudad').value;
+    const clienteReferencia = document.getElementById('clienteReferencia').value;
     
     // Crear mensaje para WhatsApp
     const mensaje = `¡Hola! Quiero realizar un pedido en Sweet Beauty:%0A%0A` +
@@ -295,7 +297,9 @@ form.addEventListener('submit', function(e) {
                     `*Mis datos:*%0A` +
                     `- Nombre: ${clienteNombre}%0A` +
                     `- Teléfono: ${clienteTelefono}%0A` +
-                    `- Dirección: ${clienteDireccion}%0A%0A` +
+                    `- Dirección: ${clienteDireccion}%0A` +
+                    `- Ciudad/Barrio: ${clienteCiudad}%0A` +
+                    `- Punto de Referencia: ${clienteReferencia || 'No especificado'}%0A%0A` +
                     `Por favor, confirmen mi pedido. ¡Gracias!`;
     
     // Número de WhatsApp (reemplazar con el número real)
