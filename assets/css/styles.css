@@ -390,6 +390,35 @@ nav ul li a:hover {
     justify-content: center;
     font-size: 3rem;
     color: var(--morado-pastel);
+    overflow: hidden;
+}
+
+.producto-imagen {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.producto-carrusel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.carrusel-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.carrusel-img.active {
+    opacity: 1;
 }
 
 .producto-info {
@@ -397,7 +426,7 @@ nav ul li a:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 150px;
+    min-height: 120px;
 }
 
 .producto-info h3 {
@@ -412,6 +441,7 @@ nav ul li a:hover {
     line-height: 1.2;
 }
 
+/* .producto-info p - Ya no se usa descripción en tarjetas
 .producto-info p {
     margin-bottom: 10px;
     line-height: 1.3;
@@ -422,6 +452,49 @@ nav ul li a:hover {
     justify-content: center;
     text-align: center;
     overflow: hidden;
+}
+*/
+
+.producto-tallas {
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.tallas-label {
+    font-size: 0.85rem;
+    color: var(--texto-oscuro);
+    font-weight: 500;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.tallas-botones {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.talla-btn {
+    background-color: #f48fb1;
+    color: var(--blanco);
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.talla-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    background-color: #ba68c8;
+    border-color: #ba68c8;
 }
 
 .producto-precio {
@@ -1471,6 +1544,7 @@ footer {
         margin-bottom: 4px;
     }
     
+    /* .producto-info p - Ya no se usa descripción en tarjetas
     .producto-info p {
         height: 50px;
         font-size: 0.75rem;
@@ -1482,6 +1556,7 @@ footer {
         line-clamp: 3;
         -webkit-box-orient: vertical;
     }
+    */
     
     .producto-precio {
         font-size: 0.9rem;
@@ -1493,6 +1568,21 @@ footer {
         font-size: 0.75rem;
         padding: 6px 10px;
         height: 30px;
+    }
+    
+    .tallas-label {
+        font-size: 0.75rem;
+        margin-bottom: 4px;
+    }
+    
+    .tallas-botones {
+        gap: 4px;
+    }
+    
+    .talla-btn {
+        padding: 3px 8px;
+        font-size: 0.7rem;
+        border-radius: 12px;
     }
     
     .modal-content {
@@ -1787,6 +1877,22 @@ footer {
     justify-content: center;
     font-size: 4rem;
     color: var(--morado-pastel);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.modal-producto-imagen {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.modal-carrusel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
     border-radius: 15px;
 }
 

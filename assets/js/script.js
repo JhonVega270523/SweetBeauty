@@ -3,19 +3,30 @@ const productos = [
     // Lencería
     {
         id: 1,
-        nombre: "Conjunto de Lencería Seda",
-        descripcion: "Conjunto de lencería en seda natural, cómodo y elegante.",
-        precio: 165000,
+        nombre: "Conjunto Monroe con Copa",
+        descripcion: "Conjunto de lencería elegante y cómodo, disponible en múltiples tallas.",
+        precio: 44000,
         categoria: "lenceria",
-        imagen: "👙"
+        imagen: "assets/images/1.jpeg",
+        tallas: ["S", "M", "L"]
     },
     {
-        id: 2,
-        nombre: "Set de Ropa Interior Elegante",
-        descripcion: "Set completo de ropa interior con encaje y detalles delicados.",
-        precio: 89000,
+        id: 13,
+        nombre: "Crop Top con Ligueros",
+        descripcion: "Crop top sensual con ligueros, perfecto para ocasiones especiales.",
+        precio: 75000,
         categoria: "lenceria",
-        imagen: "🩱"
+        imagenes: ["assets/images/2.jpeg", "assets/images/2.2.jpeg", "assets/images/2.3.jpeg", "assets/images/2.4.jpeg", "assets/images/2.5.jpeg"],
+        tallas: ["S", "M", "L"]
+    },
+    {
+        id: 14,
+        nombre: "Conjunto Lui",
+        descripcion: "Conjunto de lencería moderno y elegante con diseño exclusivo.",
+        precio: 62000,
+        categoria: "lenceria",
+        imagenes: ["assets/images/3.jpeg", "assets/images/3.2.jpeg"],
+        tallas: ["S", "M", "L", "XL"]
     },
     // Perfumes
     {
@@ -108,6 +119,56 @@ const productos = [
 let categoriaActual = 'todos';
 let ordenPrecioActual = '';
 
+// Función para inicializar carruseles automáticos
+function inicializarCarruseles() {
+    const carruseles = document.querySelectorAll('.producto-carrusel');
+    
+    carruseles.forEach(carrusel => {
+        const imagenes = carrusel.querySelectorAll('.carrusel-img');
+        if (imagenes.length <= 1) return;
+        
+        let indiceActual = 0;
+        
+        // Función para cambiar imagen
+        function cambiarImagen() {
+            // Ocultar imagen actual
+            imagenes[indiceActual].classList.remove('active');
+            
+            // Avanzar al siguiente índice
+            indiceActual = (indiceActual + 1) % imagenes.length;
+            
+            // Mostrar nueva imagen
+            imagenes[indiceActual].classList.add('active');
+        }
+        
+        // Cambiar imagen cada 2 segundos
+        setInterval(cambiarImagen, 2000);
+    });
+}
+
+// Función para inicializar carrusel del modal
+function inicializarCarruselModal(carrusel) {
+    const imagenes = carrusel.querySelectorAll('.carrusel-img');
+    if (imagenes.length <= 1) return;
+    
+    let indiceActual = 0;
+    
+    // Función para cambiar imagen
+    function cambiarImagen() {
+        // Ocultar imagen actual
+        imagenes[indiceActual].classList.remove('active');
+        
+        // Avanzar al siguiente índice
+        indiceActual = (indiceActual + 1) % imagenes.length;
+        
+        // Mostrar nueva imagen
+        imagenes[indiceActual].classList.add('active');
+    }
+    
+    // Cambiar imagen cada 2 segundos
+    setInterval(cambiarImagen, 2000);
+}
+
 // Cargar productos en la página
 function cargarProductos(categoria = 'todos', ordenPrecio = '') {
     const container = document.getElementById('productos-container');
@@ -125,12 +186,41 @@ function cargarProductos(categoria = 'todos', ordenPrecio = '') {
     }
     
     productosFiltrados.forEach(producto => {
+        // Determinar si usar imagen real, múltiples imágenes o emoji
+        let imagenHTML;
+        if (producto.imagenes && producto.imagenes.length > 1) {
+            // Producto con múltiples imágenes - crear carrusel
+            imagenHTML = `
+                <div class="producto-carrusel" data-producto-id="${producto.id}">
+                    ${producto.imagenes.map((img, index) => 
+                        `<img src="${img}" alt="${producto.nombre}" class="producto-imagen carrusel-img ${index === 0 ? 'active' : ''}" data-index="${index}">`
+                    ).join('')}
+                </div>
+            `;
+        } else if (producto.imagen && producto.imagen.includes('assets/')) {
+            // Producto con una sola imagen
+            imagenHTML = `<img src="${producto.imagen}" alt="${producto.nombre}" class="producto-imagen">`;
+        } else {
+            // Producto con emoji
+            imagenHTML = producto.imagen;
+        }
+        
+        // Mostrar tallas si están disponibles
+        const tallasHTML = producto.tallas 
+            ? `<div class="producto-tallas">
+                <span class="tallas-label">Tallas:</span>
+                <div class="tallas-botones">
+                    ${producto.tallas.map(talla => `<span class="talla-btn">${talla}</span>`).join('')}
+                </div>
+               </div>`
+            : '';
+        
         const productoHTML = `
             <div class="producto-card" data-categoria="${producto.categoria}" data-id="${producto.id}">
-                <div class="producto-img">${producto.imagen}</div>
+                <div class="producto-img">${imagenHTML}</div>
                 <div class="producto-info">
                     <h3>${producto.nombre}</h3>
-                    <p>${producto.descripcion}</p>
+                    ${tallasHTML}
                     <div class="producto-precio">$${producto.precio.toLocaleString('es-CO')}</div>
                     <button class="producto-btn" data-id="${producto.id}">Comprar Ahora</button>
                 </div>
@@ -138,6 +228,9 @@ function cargarProductos(categoria = 'todos', ordenPrecio = '') {
         `;
         container.innerHTML += productoHTML;
     });
+    
+    // Inicializar carruseles automáticos
+    inicializarCarruseles();
     
     // Agregar event listeners a los botones de compra
     document.querySelectorAll('.producto-btn').forEach(btn => {
@@ -247,9 +340,42 @@ function abrirModalProducto(productoId) {
     const producto = productos.find(p => p.id === productoId);
     
     if (producto) {
-        document.getElementById('productoModalImg').textContent = producto.imagen;
+        // Manejar imagen real, múltiples imágenes o emoji
+        const modalImg = document.getElementById('productoModalImg');
+        if (producto.imagenes && producto.imagenes.length > 1) {
+            // Producto con múltiples imágenes - crear carrusel en modal
+            modalImg.innerHTML = `
+                <div class="modal-carrusel" data-producto-id="${producto.id}">
+                    ${producto.imagenes.map((img, index) => 
+                        `<img src="${img}" alt="${producto.nombre}" class="modal-producto-imagen carrusel-img ${index === 0 ? 'active' : ''}" data-index="${index}">`
+                    ).join('')}
+                </div>
+            `;
+            // Inicializar carrusel del modal
+            inicializarCarruselModal(modalImg.querySelector('.modal-carrusel'));
+        } else if (producto.imagen && producto.imagen.includes('assets/')) {
+            modalImg.innerHTML = `<img src="${producto.imagen}" alt="${producto.nombre}" class="modal-producto-imagen">`;
+        } else {
+            modalImg.textContent = producto.imagen;
+        }
+        
         document.getElementById('productoModalNombre').textContent = producto.nombre;
-        document.getElementById('productoModalDescripcion').textContent = producto.descripcion;
+        
+        // Mostrar tallas como botones interactivos si están disponibles
+        const modalDescripcion = document.getElementById('productoModalDescripcion');
+        if (producto.tallas) {
+            modalDescripcion.innerHTML = `
+                <div class="producto-tallas">
+                    <span class="tallas-label">Tallas:</span>
+                    <div class="tallas-botones">
+                        ${producto.tallas.map(talla => `<span class="talla-btn">${talla}</span>`).join('')}
+                    </div>
+                </div>
+            `;
+        } else {
+            modalDescripcion.innerHTML = '';
+        }
+        
         document.getElementById('productoModalPrecio').textContent = `$${producto.precio.toLocaleString('es-CO')}`;
         
         // Guardar el ID del producto para el botón de comprar
