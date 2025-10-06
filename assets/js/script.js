@@ -235,9 +235,378 @@ const productos = [
         imagen: "assets/images/26.jpeg",
         tallas: ["S", "M", "L"]
     },
-    // Perfumes
     {
         id: 27,
+        nombre: "Set Moños",
+        descripcion: "Set de lencería con detalles de moños elegantes.",
+        precio: 52000,
+        categoria: "lenceria",
+        imagen: "assets/images/27.jpeg",
+        tallas: ["S", "M", "L", "XL"]
+    },
+    {
+        id: 28,
+        nombre: "Conjunto Estampado Lauren",
+        descripcion: "Conjunto de lencería con estampado exclusivo Lauren.",
+        precio: 28000,
+        categoria: "lenceria",
+        imagen: "assets/images/28.jpeg",
+        tallas: ["Única"]
+    },
+    {
+        id: 29,
+        nombre: "Corset Lentejuelas Nara",
+        descripcion: "Corset de lencería con lentejuelas y diseño exclusivo Nara.",
+        precio: 76000,
+        categoria: "lenceria",
+        imagen: "assets/images/29.jpeg",
+        tallas: ["S", "M", "L", "XL"]
+    },
+    {
+        id: 30,
+        nombre: "Set Lenceria Rosas",
+        descripcion: "Set de lencería con diseño de rosas elegante.",
+        precio: 50000,
+        categoria: "lenceria",
+        imagen: "assets/images/30.jpeg",
+        tallas: ["S", "M", "L"]
+    },
+    {
+        id: 31,
+        nombre: "Corset con Panty Martina",
+        descripcion: "Corset de lencería con panty y diseño exclusivo Martina.",
+        precio: 75000,
+        categoria: "lenceria",
+        imagen: "assets/images/31.jpeg",
+        tallas: ["S", "M", "L", "XL"]
+    },
+    {
+        id: 32,
+        nombre: "Crop Top Varilla Aury",
+        descripcion: "Crop top de lencería con varillas y diseño exclusivo Aury.",
+        precio: 54000,
+        categoria: "lenceria",
+        imagen: "assets/images/32.jpeg",
+        tallas: ["S", "M", "L", "XL"]
+    },
+    {
+        id: 33,
+        nombre: "Corset Largo ADA",
+        descripcion: "Corset largo de lencería con diseño exclusivo ADA.",
+        precio: 70000,
+        categoria: "lenceria",
+        imagen: "assets/images/33.jpeg",
+        tallas: ["S", "M", "L", "XL"]
+    },
+    {
+        id: 34,
+        nombre: "Corset Varilla Tulia",
+        descripcion: "Corset de lencería con varillas y diseño exclusivo Tulia.",
+        precio: 67000,
+        categoria: "lenceria",
+        imagenes: ["assets/images/34.jpeg", "assets/images/34.2.jpeg"],
+        tallas: ["S", "M", "L", "XL"]
+    },
+    {
+        id: 35,
+        nombre: "Brasier y Cachetero",
+        descripcion: "Set de brasier y cachetero de lencería elegante.",
+        precio: 55000,
+        categoria: "lenceria",
+        imagenes: ["assets/images/35.jpeg", "assets/images/35.2.jpeg", "assets/images/35.3.jpeg"],
+        tallas: ["32", "34", "36", "38"]
+    },
+    {
+        id: 36,
+        nombre: "Conjunto",
+        descripcion: "Conjunto de lencería elegante y cómodo.",
+        precio: 48000,
+        categoria: "lenceria",
+        imagenes: ["assets/images/36.jpeg", "assets/images/36.2.jpeg"],
+        tallas: ["32", "34", "36", "39"]
+    },
+    {
+        id: 37,
+        nombre: "Corset Orquidea",
+        descripcion: "Corset de lencería con diseño exclusivo Orquídea.",
+        precio: 48000,
+        categoria: "lenceria",
+        imagenes: ["assets/images/37.jpeg", "assets/images/37.2.jpeg"],
+        tallas: ["S", "M", "L", "XL"]
+    },
+    {
+        id: 38,
+        nombre: "Conjunto Chanel",
+        descripcion: "Conjunto de lencería con diseño exclusivo Chanel.",
+        precio: 32000,
+        categoria: "lenceria",
+        imagenes: ["assets/images/38.jpeg", "assets/images/38.2.jpeg"],
+        tallas: ["S"]
+    },
+    {
+        id: 39,
+        nombre: "Conjunto Destellante Victoria",
+        descripcion: "Conjunto de lencería con destellos y diseño exclusivo Victoria.",
+        precio: 39000,
+        categoria: "lenceria",
+        imagen: "assets/images/39.jpeg",
+        tallas: ["Única"]
+    },
+    {
+        id: 40,
+        nombre: "Liguero Antonia",
+        descripcion: "Liguero de lencería con diseño exclusivo Antonia.",
+        precio: 64000,
+        categoria: "lenceria",
+        imagen: "assets/images/40.jpeg",
+        tallas: ["S", "M", "L", "XL"]
+    },
+    {
+        id: 41,
+        nombre: "Set Cleo",
+        descripcion: "Set de lencería con diseño exclusivo Cleo.",
+        precio: 50000,
+        categoria: "lenceria",
+        imagenes: ["assets/images/41.jpeg", "assets/images/41.2.jpeg"],
+        tallas: ["S", "M", "L", "XL"]
+    },
+    {
+        id: 42,
+        nombre: "Conjunto Basico Carmen",
+        descripcion: "Conjunto básico de lencería con diseño exclusivo Carmen.",
+        precio: 35000,
+        categoria: "lenceria",
+        imagenes: ["assets/images/42.jpeg", "assets/images/42.2.jpeg"],
+        tallas: ["Única"]
+    },
+    {
+        id: 43,
+        nombre: "Conjunto Solen",
+        descripcion: "Conjunto de lencería con diseño exclusivo Solen.",
+        precio: 64000,
+        categoria: "lenceria",
+        imagen: "assets/images/43.jpeg",
+        tallas: ["Única"]
+    },
+    {
+        id: 44,
+        nombre: "Set Lentejuelas",
+        descripcion: "Set de lencería con lentejuelas elegantes.",
+        precio: 57000,
+        categoria: "lenceria",
+        imagen: "assets/images/44.jpeg",
+        tallas: ["32", "34", "36"]
+    },
+    {
+        id: 45,
+        nombre: "Conjunto Corset-Panty Nova Largo",
+        descripcion: "Conjunto de lencería con corset-panty largo y diseño Nova.",
+        precio: 70000,
+        categoria: "lenceria",
+        imagen: "assets/images/45.jpeg",
+        tallas: ["S", "M", "L", "XL"]
+    },
+    {
+        id: 46,
+        nombre: "Conjunto Varilla Gabriela",
+        descripcion: "Conjunto de lencería con varillas y diseño exclusivo Gabriela.",
+        precio: 69000,
+        categoria: "lenceria",
+        imagenes: ["assets/images/46.jpeg", "assets/images/46.2.jpeg"],
+        tallas: ["S", "M", "L"]
+    },
+    {
+        id: 47,
+        nombre: "Lenceria Lolita",
+        descripcion: "Lencería con diseño exclusivo Lolita.",
+        precio: 58000,
+        categoria: "lenceria",
+        imagenes: ["assets/images/47.jpeg", "assets/images/47.2.jpeg"],
+        tallas: ["S", "M", "L", "XL"]
+    },
+    {
+        id: 48,
+        nombre: "Conjunto Cresida",
+        descripcion: "Conjunto de lencería con diseño exclusivo Cresida.",
+        precio: 50000,
+        categoria: "lenceria",
+        imagen: "assets/images/48.jpeg",
+        tallas: ["S", "M", "L"]
+    },
+    {
+        id: 49,
+        nombre: "Conjunto Aurora",
+        descripcion: "Conjunto de lencería con diseño exclusivo Aurora.",
+        precio: 50000,
+        categoria: "lenceria",
+        imagenes: ["assets/images/49.jpeg", "assets/images/49.2.jpeg"],
+        tallas: ["S", "M", "L", "XL"]
+    },
+    {
+        id: 50,
+        nombre: "Conjunto Basico Fida",
+        descripcion: "Conjunto básico de lencería con diseño exclusivo Fida.",
+        precio: 25000,
+        categoria: "lenceria",
+        imagen: "assets/images/50.jpeg",
+        tallas: ["Única"]
+    },
+    {
+        id: 51,
+        nombre: "Liguero Gala",
+        descripcion: "Liguero de lencería con diseño exclusivo Gala.",
+        precio: 42000,
+        categoria: "lenceria",
+        imagen: "assets/images/51.jpeg",
+        tallas: ["Única"]
+    },
+    {
+        id: 52,
+        nombre: "Conjunto Elettra Mariposa",
+        descripcion: "Conjunto de lencería con diseño de mariposa exclusivo Elettra.",
+        precio: 29000,
+        categoria: "lenceria",
+        imagen: "assets/images/52.jpeg",
+        tallas: ["Única"]
+    },
+    {
+        id: 53,
+        nombre: "Conjunto-Panty Estrellita",
+        descripcion: "Conjunto-panty de lencería con diseño de estrellitas.",
+        precio: 70000,
+        categoria: "lenceria",
+        imagen: "assets/images/53.jpeg",
+        tallas: ["S", "M", "L", "XL"]
+    },
+    {
+        id: 54,
+        nombre: "Body Fabiana",
+        descripcion: "Body de lencería con diseño exclusivo Fabiana.",
+        precio: 65000,
+        categoria: "lenceria",
+        imagen: "assets/images/54.jpeg",
+        tallas: ["S", "M", "L", "XL"]
+    },
+    {
+        id: 55,
+        nombre: "Conjunto Persefone",
+        descripcion: "Conjunto de lencería con diseño exclusivo Persefone.",
+        precio: 50000,
+        categoria: "lenceria",
+        imagen: "assets/images/55.jpeg",
+        tallas: ["32", "34"]
+    },
+    {
+        id: 56,
+        nombre: "Conjunto",
+        descripcion: "Conjunto de lencería elegante y cómodo.",
+        precio: 55000,
+        categoria: "lenceria",
+        imagen: "assets/images/56.jpeg",
+        tallas: ["S", "M", "L", "XL"]
+    },
+    {
+        id: 57,
+        nombre: "Conjunto Corset Hazel",
+        descripcion: "Conjunto corset de lencería con diseño exclusivo Hazel.",
+        precio: 60000,
+        categoria: "lenceria",
+        imagen: "assets/images/57.jpeg",
+        tallas: ["S", "M", "L", "XL"]
+    },
+    {
+        id: 58,
+        nombre: "Corset-Panty Hermes",
+        descripcion: "Corset-panty de lencería con diseño exclusivo Hermes.",
+        precio: 66000,
+        categoria: "lenceria",
+        imagen: "assets/images/58.jpeg",
+        tallas: ["S", "M", "L", "XL"]
+    },
+    {
+        id: 59,
+        nombre: "Conjunto Brillos V",
+        descripcion: "Conjunto de lencería con brillos y diseño V.",
+        precio: 53000,
+        categoria: "lenceria",
+        imagen: "assets/images/59.jpeg",
+        tallas: ["Única"]
+    },
+    {
+        id: 60,
+        nombre: "Conjunto-Blusa y Semi Tanga Alia",
+        descripcion: "Conjunto de lencería con blusa y semi tanga diseño Alia.",
+        precio: 45000,
+        categoria: "lenceria",
+        imagen: "assets/images/60.jpeg",
+        tallas: ["S", "M", "L", "XL"]
+    },
+    {
+        id: 61,
+        nombre: "Trio Cachetero, Top con Copa y Tanga Graduable",
+        descripcion: "Trío de lencería con cachetero, top con copa y tanga graduable.",
+        precio: 50000,
+        categoria: "lenceria",
+        imagen: "assets/images/61.jpeg",
+        tallas: ["S", "M", "L", "XL"]
+    },
+    {
+        id: 62,
+        nombre: "Conjunto Jossie",
+        descripcion: "Conjunto de lencería con diseño exclusivo Jossie.",
+        precio: 50000,
+        categoria: "lenceria",
+        imagen: "assets/images/62.jpeg",
+        tallas: ["Única"]
+    },
+    {
+        id: 63,
+        nombre: "Conjunto Afrodita",
+        descripcion: "Conjunto de lencería con diseño exclusivo Afrodita.",
+        precio: 40000,
+        categoria: "lenceria",
+        imagen: "assets/images/63.jpeg",
+        tallas: ["S", "M", "L"]
+    },
+    {
+        id: 64,
+        nombre: "Crop Top Salome",
+        descripcion: "Crop top de lencería con diseño exclusivo Salome.",
+        precio: 55000,
+        categoria: "lenceria",
+        imagen: "assets/images/64.jpeg",
+        tallas: ["S", "M"]
+    },
+    {
+        id: 65,
+        nombre: "Conjunto Blusa Michael",
+        descripcion: "Conjunto de lencería con blusa diseño Michael.",
+        precio: 46000,
+        categoria: "lenceria",
+        imagen: "assets/images/65.jpeg",
+        tallas: ["Única"]
+    },
+    {
+        id: 66,
+        nombre: "Conjunto Victoria Basico",
+        descripcion: "Conjunto básico de lencería con diseño Victoria.",
+        precio: 45000,
+        categoria: "lenceria",
+        imagen: "assets/images/66.jpeg",
+        tallas: ["Única"]
+    },
+    {
+        id: 67,
+        nombre: "Conjunto Raily",
+        descripcion: "Conjunto de lencería con diseño exclusivo Raily.",
+        precio: 45000,
+        categoria: "lenceria",
+        imagen: "assets/images/67.jpeg",
+        tallas: ["S", "M", "L", "XL"]
+    },
+    // Perfumes
+    {
+        id: 68,
         nombre: "Perfume Floral Exclusivo",
         descripcion: "Fragancia floral suave y duradera para el día a día.",
         precio: 125000,
@@ -245,7 +614,7 @@ const productos = [
         imagen: "🌸"
     },
     {
-        id: 28,
+        id: 69,
         nombre: "Eau de Parfum Nocturno",
         descripcion: "Fragancia intensa y seductora para ocasiones especiales.",
         precio: 180000,
@@ -254,7 +623,7 @@ const productos = [
     },
     // Accesorios
     {
-        id: 29,
+        id: 70,
         nombre: "Collar de Perlas Elegante",
         descripcion: "Collar de perlas naturales con dije de plata.",
         precio: 125000,
@@ -262,7 +631,7 @@ const productos = [
         imagen: "📿"
     },
     {
-        id: 30,
+        id: 71,
         nombre: "Bolso de Mano Trendy",
         descripcion: "Bolso de mano con diseño moderno y espacio amplio.",
         precio: 145000,
@@ -271,7 +640,7 @@ const productos = [
     },
     // Maquillaje
     {
-        id: 31,
+        id: 72,
         nombre: "Kit de Maquillaje Profesional",
         descripcion: "Kit completo con sombras, labiales y base de alta calidad.",
         precio: 189000,
@@ -279,7 +648,7 @@ const productos = [
         imagen: "💄"
     },
     {
-        id: 32,
+        id: 73,
         nombre: "Paleta de Sombras Premium",
         descripcion: "Paleta con 12 sombras de colores neutros y vibrantes.",
         precio: 95000,
@@ -288,7 +657,7 @@ const productos = [
     },
     // Pijamas
     {
-        id: 33,
+        id: 74,
         nombre: "Pijama de Seda Comfort",
         descripcion: "Pijama de seda suave para noches cómodas y elegantes.",
         precio: 210000,
@@ -296,7 +665,7 @@ const productos = [
         imagen: "👘"
     },
     {
-        id: 34,
+        id: 75,
         nombre: "Conjunto Pijama Algodón",
         descripcion: "Pijama de algodón 100% orgánico, cómodo y transpirable.",
         precio: 75000,
@@ -305,7 +674,7 @@ const productos = [
     },
     // Vestidos de Baño
     {
-        id: 35,
+        id: 76,
         nombre: "Bikini Elegante",
         descripcion: "Bikini de dos piezas con diseño moderno y ajuste perfecto.",
         precio: 135000,
@@ -313,12 +682,247 @@ const productos = [
         imagen: "👙"
     },
     {
-        id: 36,
+        id: 77,
         nombre: "Traje de Baño Entero",
         descripcion: "Traje de baño de una pieza con corte clásico y elegante.",
         precio: 155000,
         categoria: "vestidos-bano",
         imagen: "🏊‍♀️"
+    },
+    // Nuevos productos de lencería
+    {
+        id: 78,
+        nombre: "Corset con Brillos Brigitte",
+        descripcion: "Corset elegante con detalles brillantes y diseño exclusivo Brigitte.",
+        precio: 72000,
+        categoria: "lenceria",
+        imagenes: ["assets/images/68.jpeg", "assets/images/68.2.jpeg"],
+        tallas: ["S", "M", "L"]
+    },
+    {
+        id: 79,
+        nombre: "Corset Madison",
+        descripcion: "Corset sofisticado con diseño exclusivo Madison.",
+        precio: 65000,
+        categoria: "lenceria",
+        imagenes: ["assets/images/69.jpeg", "assets/images/69.2.jpeg"],
+        tallas: ["S", "M", "L", "XL"]
+    },
+    {
+        id: 80,
+        nombre: "Corset Encaje Katia",
+        descripcion: "Corset de encaje elegante con diseño exclusivo Katia.",
+        precio: 65000,
+        categoria: "lenceria",
+        imagenes: ["assets/images/70.jpeg", "assets/images/70.2.jpeg", "assets/images/70.3.jpeg", "assets/images/70.4.jpeg", "assets/images/70.5.jpeg", "assets/images/70.6.jpeg"],
+        tallas: ["S", "M", "L", "XL"]
+    },
+    {
+        id: 81,
+        nombre: "Colegiala Cuadros",
+        descripcion: "Conjunto colegiala con estampado de cuadros, perfecto para ocasiones especiales.",
+        precio: 54000,
+        categoria: "lenceria",
+        imagenes: ["assets/images/71.jpeg", "assets/images/71.2.jpeg"],
+        tallas: ["Única"]
+    },
+    {
+        id: 82,
+        nombre: "Conjunto Flot",
+        descripcion: "Conjunto de lencería con diseño Flot elegante y cómodo.",
+        precio: 30000,
+        categoria: "lenceria",
+        imagenes: ["assets/images/72.jpeg", "assets/images/72.2.jpeg"],
+        tallas: ["Única"]
+    },
+    {
+        id: 83,
+        nombre: "Conjunto Cachetero",
+        descripcion: "Conjunto de lencería con cachetero incluido, diseño moderno y elegante.",
+        precio: 40000,
+        categoria: "lenceria",
+        imagenes: ["assets/images/73.jpeg", "assets/images/73.2.jpeg", "assets/images/73.3.jpeg"],
+        tallas: ["S", "M", "L", "XL"]
+    },
+    {
+        id: 84,
+        nombre: "Conjunto",
+        descripcion: "Conjunto de lencería elegante y cómodo con diseño exclusivo.",
+        precio: 42000,
+        categoria: "lenceria",
+        imagenes: ["assets/images/74.jpeg", "assets/images/74.2.jpeg", "assets/images/74.3.jpeg"],
+        tallas: ["S", "M", "L", "XL"]
+    },
+    {
+        id: 85,
+        nombre: "Panty",
+        descripcion: "Panty de lencería básico y cómodo.",
+        precio: 14000,
+        categoria: "lenceria",
+        imagen: "assets/images/75.jpeg",
+        tallas: ["Única"]
+    },
+    {
+        id: 86,
+        nombre: "Panty Grueso",
+        descripcion: "Panty grueso de lencería para mayor comodidad y soporte.",
+        precio: 18000,
+        categoria: "lenceria",
+        imagenes: ["assets/images/76.jpeg", "assets/images/76.2.jpeg"],
+        tallas: ["Única"]
+    },
+    {
+        id: 87,
+        nombre: "Panty",
+        descripcion: "Panty de lencería elegante y cómodo.",
+        precio: 13000,
+        categoria: "lenceria",
+        imagen: "assets/images/77.jpeg",
+        tallas: ["Única"]
+    },
+    {
+        id: 88,
+        nombre: "Cachetero",
+        descripcion: "Cachetero de lencería elegante y cómodo.",
+        precio: 15000,
+        categoria: "lenceria",
+        imagenes: ["assets/images/78.jpeg", "assets/images/78.2.jpeg"],
+        tallas: ["M", "L", "XL"]
+    },
+    {
+        id: 89,
+        nombre: "Cachetero",
+        descripcion: "Cachetero de lencería elegante y cómodo.",
+        precio: 15000,
+        categoria: "lenceria",
+        imagen: "assets/images/79.jpeg",
+        tallas: ["S"]
+    },
+    {
+        id: 90,
+        nombre: "Tanga Bordada",
+        descripcion: "Tanga de lencería con bordados elegantes y delicados.",
+        precio: 8000,
+        categoria: "lenceria",
+        imagenes: ["assets/images/80.jpeg", "assets/images/80.2.jpeg", "assets/images/80.3.jpeg"],
+        tallas: ["Única"]
+    },
+    {
+        id: 91,
+        nombre: "Boxer Dama",
+        descripcion: "Boxer de lencería para dama, cómodo y elegante.",
+        precio: 10000,
+        categoria: "lenceria",
+        imagenes: ["assets/images/81.jpeg", "assets/images/81.2.jpeg"],
+        tallas: ["S", "M", "L"]
+    },
+    {
+        id: 92,
+        nombre: "Panty Grueso Graduable",
+        descripcion: "Panty grueso graduable de lencería para mayor comodidad.",
+        precio: 18000,
+        categoria: "lenceria",
+        imagenes: ["assets/images/82.jpeg", "assets/images/82.2.jpeg"],
+        tallas: ["Única"]
+    },
+    {
+        id: 93,
+        nombre: "Panty Licrada con Brillos Audry",
+        descripcion: "Panty licrado con brillos y diseño exclusivo Audry.",
+        precio: 23000,
+        categoria: "lenceria",
+        imagen: "assets/images/83.jpeg",
+        tallas: ["Única"]
+    },
+    {
+        id: 94,
+        nombre: "Tanga Victoria Secret 2",
+        descripcion: "Tanga de lencería con diseño exclusivo Victoria Secret.",
+        precio: 23000,
+        categoria: "lenceria",
+        imagen: "assets/images/84.jpeg",
+        tallas: ["Única"]
+    },
+    {
+        id: 95,
+        nombre: "Delfina",
+        descripcion: "Conjunto de lencería con diseño exclusivo Delfina.",
+        precio: 10000,
+        categoria: "lenceria",
+        imagenes: ["assets/images/85.jpeg", "assets/images/85.2.jpeg"],
+        tallas: ["Única"]
+    },
+    {
+        id: 96,
+        nombre: "Moño Lentejuelas",
+        descripcion: "Accesorio de lencería con moño y lentejuelas elegantes.",
+        precio: 10000,
+        categoria: "lenceria",
+        imagenes: ["assets/images/86.jpeg", "assets/images/86.2.jpeg"],
+        tallas: ["Única"]
+    },
+    {
+        id: 97,
+        nombre: "Gloria",
+        descripcion: "Conjunto de lencería con diseño exclusivo Gloria.",
+        precio: 10000,
+        categoria: "lenceria",
+        imagenes: ["assets/images/87.jpeg", "assets/images/87.2.jpeg"],
+        tallas: ["Graduable"]
+    },
+    {
+        id: 98,
+        nombre: "Esperanza",
+        descripcion: "Conjunto de lencería con diseño exclusivo Esperanza.",
+        precio: 10000,
+        categoria: "lenceria",
+        imagenes: ["assets/images/88.jpeg", "assets/images/88.2.jpeg", "assets/images/88.3.jpeg", "assets/images/88.4.jpeg"],
+        tallas: ["Única"]
+    },
+    {
+        id: 99,
+        nombre: "Esperanza Lazos",
+        descripcion: "Conjunto de lencería con lazos y diseño exclusivo Esperanza.",
+        precio: 8000,
+        categoria: "lenceria",
+        imagen: "assets/images/89.jpeg",
+        tallas: ["Graduable"]
+    },
+    {
+        id: 100,
+        nombre: "Panty Antonella",
+        descripcion: "Panty de lencería con diseño exclusivo Antonella.",
+        precio: 9000,
+        categoria: "lenceria",
+        imagenes: ["assets/images/90.jpeg", "assets/images/90.2.jpeg", "assets/images/90.3.jpeg"],
+        tallas: ["Graduable"]
+    },
+    {
+        id: 101,
+        nombre: "Panty Alma",
+        descripcion: "Panty de lencería con diseño exclusivo Alma.",
+        precio: 10000,
+        categoria: "lenceria",
+        imagenes: ["assets/images/91.jpeg", "assets/images/91.2.jpeg"],
+        tallas: ["Graduable"]
+    },
+    {
+        id: 102,
+        nombre: "Panty Victoria",
+        descripcion: "Panty de lencería con diseño exclusivo Victoria.",
+        precio: 15000,
+        categoria: "lenceria",
+        imagen: "assets/images/92.jpeg",
+        tallas: ["Única"]
+    },
+    {
+        id: 103,
+        nombre: "Panty Encaje",
+        descripcion: "Panty de lencería con encaje elegante y delicado.",
+        precio: 15000,
+        categoria: "lenceria",
+        imagen: "assets/images/93.jpeg",
+        tallas: ["Única"]
     }
 ];
 
@@ -353,23 +957,208 @@ function inicializarCarruseles() {
     });
 }
 
+// Función para inicializar navegación móvil
+function inicializarNavegacionMovil(contenedor, imagenes) {
+    console.log('Inicializando navegación móvil:', contenedor);
+    const img = contenedor.querySelector('.modal-producto-imagen-movil');
+    const puntos = contenedor.querySelectorAll('.punto-movil');
+    let indiceActual = 0;
+    
+    // Función para cambiar imagen
+    function cambiarImagen(indice) {
+        console.log('Cambiando a imagen:', indice);
+        img.src = imagenes[indice];
+        
+        // Asegurar dimensiones consistentes
+        img.style.height = '350px';
+        img.style.minHeight = '350px';
+        img.style.maxHeight = '350px';
+        img.style.width = '100%';
+        img.style.objectFit = 'cover';
+        img.style.objectPosition = 'center';
+        
+        // Actualizar puntos
+        puntos.forEach((punto, index) => {
+            if (index === indice) {
+                punto.classList.add('activo');
+                punto.style.backgroundColor = '#f48fb1';
+            } else {
+                punto.classList.remove('activo');
+                punto.style.backgroundColor = 'rgba(255,255,255,0.5)';
+            }
+        });
+        
+        indiceActual = indice;
+    }
+    
+    // Agregar event listeners a los puntos
+    puntos.forEach((punto, index) => {
+        punto.addEventListener('click', () => {
+            cambiarImagen(index);
+        });
+    });
+    
+    // Auto-cambio cada 3 segundos (opcional)
+    setInterval(() => {
+        const siguienteIndice = (indiceActual + 1) % imagenes.length;
+        cambiarImagen(siguienteIndice);
+    }, 3000);
+}
+
 // Función para inicializar carrusel del modal
 function inicializarCarruselModal(carrusel) {
+    console.log('Inicializando carrusel del modal:', carrusel);
     const imagenes = carrusel.querySelectorAll('.carrusel-img');
-    if (imagenes.length <= 1) return;
+    console.log('Imágenes encontradas:', imagenes.length);
+    
+    // Detectar si estamos en móvil
+    const esMovil = window.innerWidth <= 768;
+    console.log('Es móvil:', esMovil);
+    
+    if (imagenes.length <= 1) {
+        console.log('Solo hay 1 imagen o menos, no se inicializa carrusel');
+        if (imagenes.length === 1) {
+            imagenes[0].classList.add('active');
+            imagenes[0].style.opacity = '1';
+            imagenes[0].style.zIndex = '2';
+            
+            // En móvil, forzar estilos adicionales
+            if (esMovil) {
+                imagenes[0].style.cssText = `
+                    position: absolute !important;
+                    top: 0 !important;
+                    left: 0 !important;
+                    width: 100% !important;
+                    height: 100% !important;
+                    object-fit: cover !important;
+                    opacity: 1 !important;
+                    z-index: 2 !important;
+                    display: block !important;
+                    visibility: visible !important;
+                    border: 2px solid green !important;
+                `;
+            }
+        }
+        return;
+    }
+    
+    // Configurar todas las imágenes
+    imagenes.forEach((img, index) => {
+        img.classList.remove('active');
+        img.style.opacity = '0';
+        img.style.zIndex = '1';
+        
+        // En móvil, aplicar estilos forzados
+        if (esMovil) {
+            img.style.cssText = `
+                position: absolute !important;
+                top: 0 !important;
+                left: 0 !important;
+                width: 100% !important;
+                height: 100% !important;
+                object-fit: cover !important;
+                opacity: 0 !important;
+                z-index: 1 !important;
+                display: block !important;
+                visibility: visible !important;
+                border: 2px solid red !important;
+                background-image: none !important;
+                background-size: cover !important;
+                background-position: center !important;
+                background-repeat: no-repeat !important;
+            `;
+            // Forzar que la imagen se cargue
+            img.onload = function() {
+                console.log('Imagen cargada en móvil:', img.src);
+            };
+            img.onerror = function() {
+                console.error('Error cargando imagen en móvil:', img.src);
+            };
+        }
+        
+        if (index === 0) {
+            img.classList.add('active');
+            img.style.opacity = '1';
+            img.style.zIndex = '2';
+            
+            // En móvil, forzar estilos para la imagen activa
+            if (esMovil) {
+                img.style.cssText = `
+                    position: absolute !important;
+                    top: 0 !important;
+                    left: 0 !important;
+                    width: 100% !important;
+                    height: 100% !important;
+                    object-fit: cover !important;
+                    opacity: 1 !important;
+                    z-index: 2 !important;
+                    display: block !important;
+                    visibility: visible !important;
+                    border: 2px solid green !important;
+                    background-image: none !important;
+                    background-size: cover !important;
+                    background-position: center !important;
+                    background-repeat: no-repeat !important;
+                `;
+            }
+            
+            console.log('Imagen activa:', index, img.src);
+        }
+    });
     
     let indiceActual = 0;
     
     // Función para cambiar imagen
     function cambiarImagen() {
+        console.log('Cambiando imagen, actual:', indiceActual);
         // Ocultar imagen actual
         imagenes[indiceActual].classList.remove('active');
+        imagenes[indiceActual].style.opacity = '0';
+        imagenes[indiceActual].style.zIndex = '1';
+        
+        // En móvil, forzar estilos para imagen oculta
+        if (esMovil) {
+            imagenes[indiceActual].style.cssText = `
+                position: absolute !important;
+                top: 0 !important;
+                left: 0 !important;
+                width: 100% !important;
+                height: 100% !important;
+                object-fit: cover !important;
+                opacity: 0 !important;
+                z-index: 1 !important;
+                display: block !important;
+                visibility: visible !important;
+                border: 2px solid red !important;
+            `;
+        }
         
         // Avanzar al siguiente índice
         indiceActual = (indiceActual + 1) % imagenes.length;
         
         // Mostrar nueva imagen
         imagenes[indiceActual].classList.add('active');
+        imagenes[indiceActual].style.opacity = '1';
+        imagenes[indiceActual].style.zIndex = '2';
+        
+        // En móvil, forzar estilos para imagen activa
+        if (esMovil) {
+            imagenes[indiceActual].style.cssText = `
+                position: absolute !important;
+                top: 0 !important;
+                left: 0 !important;
+                width: 100% !important;
+                height: 100% !important;
+                object-fit: cover !important;
+                opacity: 1 !important;
+                z-index: 2 !important;
+                display: block !important;
+                visibility: visible !important;
+                border: 2px solid green !important;
+            `;
+        }
+        
+        console.log('Nueva imagen activa:', indiceActual, imagenes[indiceActual].src);
     }
     
     // Cambiar imagen cada 2 segundos
@@ -550,18 +1339,42 @@ function abrirModalProducto(productoId) {
         // Manejar imagen real, múltiples imágenes o emoji
         const modalImg = document.getElementById('productoModalImg');
         if (producto.imagenes && producto.imagenes.length > 1) {
-            // Producto con múltiples imágenes - crear carrusel en modal
-            modalImg.innerHTML = `
-                <div class="modal-carrusel" data-producto-id="${producto.id}">
-                    ${producto.imagenes.map((img, index) => 
-                        `<img src="${img}" alt="${producto.nombre}" class="modal-producto-imagen carrusel-img ${index === 0 ? 'active' : ''}" data-index="${index}">`
-                    ).join('')}
-                </div>
-            `;
-            // Inicializar carrusel del modal
-            inicializarCarruselModal(modalImg.querySelector('.modal-carrusel'));
+            // Detectar si es móvil
+            const esMovil = window.innerWidth <= 768;
+            
+            if (esMovil) {
+                // En móvil, mostrar primera imagen con navegación
+                modalImg.innerHTML = `
+                    <div class="modal-carrusel-movil" data-producto-id="${producto.id}">
+                        <img src="${producto.imagenes[0]}" alt="${producto.nombre}" class="modal-producto-imagen-movil" style="width: 100%; height: 350px; min-height: 350px; max-height: 350px; object-fit: cover; object-position: center; display: block;">
+                        <div class="navegacion-movil" style="position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px; z-index: 10;">
+                            ${producto.imagenes.map((_, index) => 
+                                `<button class="punto-movil ${index === 0 ? 'activo' : ''}" data-index="${index}" style="width: 12px; height: 12px; border-radius: 50%; border: 2px solid white; background-color: ${index === 0 ? '#f48fb1' : 'rgba(255,255,255,0.5)'}; cursor: pointer;"></button>`
+                            ).join('')}
+                        </div>
+                    </div>
+                `;
+                console.log('Móvil: Mostrando primera imagen con navegación:', producto.imagenes[0]);
+                
+                // Inicializar navegación móvil
+                inicializarNavegacionMovil(modalImg.querySelector('.modal-carrusel-movil'), producto.imagenes);
+            } else {
+                // En desktop, usar carrusel
+                modalImg.innerHTML = `
+                    <div class="modal-carrusel" data-producto-id="${producto.id}">
+                        ${producto.imagenes.map((img, index) => 
+                            `<img src="${img}" alt="${producto.nombre}" class="carrusel-img ${index === 0 ? 'active' : ''}" data-index="${index}">`
+                        ).join('')}
+                    </div>
+                `;
+                // Inicializar carrusel del modal inmediatamente
+                const carrusel = modalImg.querySelector('.modal-carrusel');
+                if (carrusel) {
+                    inicializarCarruselModal(carrusel);
+                }
+            }
         } else if (producto.imagen && producto.imagen.includes('assets/')) {
-            modalImg.innerHTML = `<img src="${producto.imagen}" alt="${producto.nombre}" class="modal-producto-imagen">`;
+            modalImg.innerHTML = `<img src="${producto.imagen}" alt="${producto.nombre}" class="modal-producto-imagen" style="display: block; visibility: visible;">`;
         } else {
             modalImg.textContent = producto.imagen;
         }

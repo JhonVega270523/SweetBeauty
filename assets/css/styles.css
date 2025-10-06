@@ -293,6 +293,12 @@ nav ul li a:hover {
     margin: 0 auto;
 }
 
+.productos-main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
 .filtros-sidebar {
     background-color: var(--blanco);
     padding: 25px;
@@ -340,10 +346,28 @@ nav ul li a:hover {
     gap: 10px;
 }
 
+.filtros-precio-top {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: var(--blanco);
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
 .filtros-precio label {
     color: var(--texto-oscuro);
     font-weight: 600;
     font-size: 0.9rem;
+}
+
+.filtros-precio-top label {
+    color: var(--texto-oscuro);
+    font-weight: 600;
+    font-size: 1rem;
+    white-space: nowrap;
 }
 
 .select-precio {
@@ -1294,6 +1318,18 @@ footer {
         font-size: 0.9rem;
     }
     
+    .filtros-precio-top {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+        padding: 15px;
+    }
+    
+    .filtros-precio-top label {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+    
     .productos-grid {
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
         gap: 20px;
@@ -1515,6 +1551,23 @@ footer {
         background-position: right 8px center;
     }
     
+    .filtros-precio-top {
+        padding: 12px;
+        gap: 8px;
+    }
+    
+    .filtros-precio-top label {
+        font-size: 0.8rem;
+        text-align: center;
+    }
+    
+    .filtros-precio-top select {
+        font-size: 0.8rem;
+        padding: 8px 35px 8px 10px;
+        background-size: 14px;
+        background-position: right 8px center;
+    }
+    
     .productos-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 12px;
@@ -1711,6 +1764,40 @@ footer {
     .formulario-calificacion {
         padding: 12px;
     }
+    
+    /* Modal de producto en móviles pequeños */
+    .producto-modal-img {
+        height: 200px;
+    }
+    
+    .modal-carrusel {
+        height: 100%;
+        width: 100%;
+        position: relative;
+        display: block;
+    }
+    
+    .modal-carrusel .carrusel-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+        z-index: 1;
+        display: block;
+        visibility: visible;
+    }
+    
+    .modal-carrusel .carrusel-img.active {
+        opacity: 1;
+        z-index: 2;
+        display: block;
+        visibility: visible;
+    }
+    
 }
 
 /* Modal de confirmación personalizado */
@@ -1888,6 +1975,7 @@ footer {
     border-radius: 15px;
 }
 
+/* Estilos simplificados para el carrusel del modal */
 .modal-carrusel {
     position: relative;
     width: 100%;
@@ -1895,6 +1983,172 @@ footer {
     overflow: hidden;
     border-radius: 15px;
 }
+
+.modal-carrusel .carrusel-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    z-index: 1;
+}
+
+.modal-carrusel .carrusel-img.active {
+    opacity: 1;
+    z-index: 2;
+}
+
+/* Estilos para navegación móvil */
+.modal-carrusel-movil {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 15px;
+    min-height: 300px;
+    max-height: 400px;
+}
+
+.modal-producto-imagen-movil {
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    max-height: 400px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transition: opacity 0.3s ease;
+    background-color: #f8f8f8;
+}
+
+.navegacion-movil {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+}
+
+.punto-movil {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid white;
+    background-color: rgba(255,255,255,0.5);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.punto-movil.activo {
+    background-color: #f48fb1;
+}
+
+/* Estilos específicos para móvil - dimensiones consistentes */
+@media (max-width: 768px) {
+    .modal-carrusel-movil {
+        height: 350px !important;
+        min-height: 350px !important;
+        max-height: 350px !important;
+    }
+    
+    .modal-producto-imagen-movil {
+        height: 350px !important;
+        min-height: 350px !important;
+        max-height: 350px !important;
+        width: 100% !important;
+        object-fit: cover !important;
+        object-position: center !important;
+    }
+    
+    .producto-modal-img {
+        height: 350px !important;
+        min-height: 350px !important;
+        max-height: 350px !important;
+    }
+}
+
+/* FORZAR VISIBILIDAD EN MÓVILES - SOLUCIÓN ULTRA AGRESIVA */
+@media (max-width: 768px) {
+    .producto-modal-img {
+        background-color: #f0f0f0 !important;
+        min-height: 250px !important;
+        position: relative !important;
+        overflow: visible !important;
+    }
+    
+    .modal-carrusel {
+        position: relative !important;
+        width: 100% !important;
+        height: 100% !important;
+        min-height: 250px !important;
+        background-color: #f0f0f0 !important;
+        display: block !important;
+        visibility: visible !important;
+        overflow: visible !important;
+    }
+    
+    .modal-carrusel .carrusel-img {
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        opacity: 0 !important;
+        transition: opacity 0.5s ease-in-out !important;
+        z-index: 1 !important;
+        display: block !important;
+        visibility: visible !important;
+        background-color: #e0e0e0 !important;
+        border: 2px solid red !important;
+        background-image: none !important;
+        background-size: cover !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+    }
+    
+    .modal-carrusel .carrusel-img.active {
+        opacity: 1 !important;
+        z-index: 2 !important;
+        display: block !important;
+        visibility: visible !important;
+        border: 2px solid green !important;
+        background-image: none !important;
+        background-size: cover !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+    }
+    
+    /* Forzar que las imágenes se muestren */
+    .modal-carrusel img {
+        display: block !important;
+        visibility: visible !important;
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        background-color: #d0d0d0 !important;
+        border: 2px solid blue !important;
+        background-image: none !important;
+        background-size: cover !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+    }
+    
+    /* Estilos adicionales para asegurar visibilidad */
+    .modal-carrusel * {
+        display: block !important;
+        visibility: visible !important;
+    }
+}
+
 
 .producto-modal-info {
     flex: 1;
@@ -1951,9 +2205,38 @@ footer {
     }
     
     .producto-modal-img {
-        height: 400px;
+        height: 300px;
         font-size: 3rem;
     }
+    
+    .modal-carrusel {
+        height: 100%;
+        width: 100%;
+        position: relative;
+        display: block;
+    }
+    
+    .modal-carrusel .carrusel-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+        z-index: 1;
+        display: block;
+        visibility: visible;
+    }
+    
+    .modal-carrusel .carrusel-img.active {
+        opacity: 1;
+        z-index: 2;
+        display: block;
+        visibility: visible;
+    }
+    
     
     .producto-modal-info h2 {
         font-size: 1.5rem;
