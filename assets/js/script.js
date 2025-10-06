@@ -163,9 +163,81 @@ const productos = [
         imagen: "assets/images/18.jpeg",
         tallas: ["S", "M"]
     },
-    // Perfumes
     {
         id: 19,
+        nombre: "Corset Dulcinea",
+        descripcion: "Corset de lencería elegante con diseño exclusivo Dulcinea.",
+        precio: 70000,
+        categoria: "lenceria",
+        imagenes: ["assets/images/19.jpeg", "assets/images/19.2.jpeg"],
+        tallas: ["M", "L"]
+    },
+    {
+        id: 20,
+        nombre: "Conjunto Ivy",
+        descripcion: "Conjunto de lencería sofisticado con diseño exclusivo Ivy.",
+        precio: 55000,
+        categoria: "lenceria",
+        imagenes: ["assets/images/20.jpeg", "assets/images/20.2.jpeg"],
+        tallas: ["S", "M", "L"]
+    },
+    {
+        id: 21,
+        nombre: "Corset Leticia",
+        descripcion: "Corset de lencería con diseño exclusivo Leticia.",
+        precio: 61000,
+        categoria: "lenceria",
+        imagen: "assets/images/21.jpeg",
+        tallas: ["32", "34", "36"]
+    },
+    {
+        id: 22,
+        nombre: "Conjunto Lorenza Mallatex",
+        descripcion: "Conjunto de lencería con material Mallatex y diseño Lorenza.",
+        precio: 28000,
+        categoria: "lenceria",
+        imagen: "assets/images/22.jpeg",
+        tallas: ["Única"]
+    },
+    {
+        id: 23,
+        nombre: "Conjunto Liguero Signe",
+        descripcion: "Conjunto de lencería con liguero y diseño exclusivo Signe.",
+        precio: 65000,
+        categoria: "lenceria",
+        imagen: "assets/images/23.jpeg",
+        tallas: ["S", "M", "L", "XL"]
+    },
+    {
+        id: 24,
+        nombre: "Conjunto Encaje Victoria",
+        descripcion: "Conjunto de lencería con encaje elegante y diseño Victoria.",
+        precio: 45000,
+        categoria: "lenceria",
+        imagen: "assets/images/24.jpeg",
+        tallas: ["Única"]
+    },
+    {
+        id: 25,
+        nombre: "Corset con Panty Dulce",
+        descripcion: "Corset de lencería con panty y diseño dulce y elegante.",
+        precio: 58000,
+        categoria: "lenceria",
+        imagen: "assets/images/25.jpeg",
+        tallas: ["32", "34", "36", "38"]
+    },
+    {
+        id: 26,
+        nombre: "Set Cleopatra",
+        descripcion: "Set de lencería con diseño exclusivo Cleopatra.",
+        precio: 68000,
+        categoria: "lenceria",
+        imagen: "assets/images/26.jpeg",
+        tallas: ["S", "M", "L"]
+    },
+    // Perfumes
+    {
+        id: 27,
         nombre: "Perfume Floral Exclusivo",
         descripcion: "Fragancia floral suave y duradera para el día a día.",
         precio: 125000,
@@ -173,7 +245,7 @@ const productos = [
         imagen: "🌸"
     },
     {
-        id: 20,
+        id: 28,
         nombre: "Eau de Parfum Nocturno",
         descripcion: "Fragancia intensa y seductora para ocasiones especiales.",
         precio: 180000,
@@ -182,7 +254,7 @@ const productos = [
     },
     // Accesorios
     {
-        id: 21,
+        id: 29,
         nombre: "Collar de Perlas Elegante",
         descripcion: "Collar de perlas naturales con dije de plata.",
         precio: 125000,
@@ -190,7 +262,7 @@ const productos = [
         imagen: "📿"
     },
     {
-        id: 22,
+        id: 30,
         nombre: "Bolso de Mano Trendy",
         descripcion: "Bolso de mano con diseño moderno y espacio amplio.",
         precio: 145000,
@@ -199,7 +271,7 @@ const productos = [
     },
     // Maquillaje
     {
-        id: 23,
+        id: 31,
         nombre: "Kit de Maquillaje Profesional",
         descripcion: "Kit completo con sombras, labiales y base de alta calidad.",
         precio: 189000,
@@ -207,7 +279,7 @@ const productos = [
         imagen: "💄"
     },
     {
-        id: 24,
+        id: 32,
         nombre: "Paleta de Sombras Premium",
         descripcion: "Paleta con 12 sombras de colores neutros y vibrantes.",
         precio: 95000,
@@ -216,7 +288,7 @@ const productos = [
     },
     // Pijamas
     {
-        id: 25,
+        id: 33,
         nombre: "Pijama de Seda Comfort",
         descripcion: "Pijama de seda suave para noches cómodas y elegantes.",
         precio: 210000,
@@ -224,7 +296,7 @@ const productos = [
         imagen: "👘"
     },
     {
-        id: 26,
+        id: 34,
         nombre: "Conjunto Pijama Algodón",
         descripcion: "Pijama de algodón 100% orgánico, cómodo y transpirable.",
         precio: 75000,
@@ -233,7 +305,7 @@ const productos = [
     },
     // Vestidos de Baño
     {
-        id: 27,
+        id: 35,
         nombre: "Bikini Elegante",
         descripcion: "Bikini de dos piezas con diseño moderno y ajuste perfecto.",
         precio: 135000,
@@ -241,7 +313,7 @@ const productos = [
         imagen: "👙"
     },
     {
-        id: 28,
+        id: 36,
         nombre: "Traje de Baño Entero",
         descripcion: "Traje de baño de una pieza con corte clásico y elegante.",
         precio: 155000,
