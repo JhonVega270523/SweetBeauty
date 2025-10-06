@@ -929,6 +929,9 @@ const productos = [
 // Variables globales
 let categoriaActual = 'todos';
 let ordenPrecioActual = '';
+let paginaActual = 1;
+const PRODUCTOS_POR_PAGINA = 24;
+let productosFiltrados = [];
 
 // Función para inicializar carruseles automáticos
 function inicializarCarruseles() {
@@ -1166,12 +1169,13 @@ function inicializarCarruselModal(carrusel) {
 }
 
 // Cargar productos en la página
-function cargarProductos(categoria = 'todos', ordenPrecio = '') {
+function cargarProductos(categoria = 'todos', ordenPrecio = '', pagina = 1) {
     const container = document.getElementById('productos-container');
     container.innerHTML = '';
     
-    let productosFiltrados = categoria === 'todos' 
-        ? productos 
+    // Filtrar productos por categoría
+    productosFiltrados = categoria === 'todos' 
+        ? [...productos] 
         : productos.filter(p => p.categoria === categoria);
     
     // Aplicar ordenamiento por precio si está seleccionado
@@ -1181,7 +1185,13 @@ function cargarProductos(categoria = 'todos', ordenPrecio = '') {
         productosFiltrados.sort((a, b) => b.precio - a.precio);
     }
     
-    productosFiltrados.forEach(producto => {
+    // Calcular productos para la página actual
+    const inicio = (pagina - 1) * PRODUCTOS_POR_PAGINA;
+    const fin = inicio + PRODUCTOS_POR_PAGINA;
+    const productosPagina = productosFiltrados.slice(inicio, fin);
+    
+    // Renderizar productos de la página actual
+    productosPagina.forEach(producto => {
         // Determinar si usar imagen real, múltiples imágenes o emoji
         let imagenHTML;
         if (producto.imagenes && producto.imagenes.length > 1) {
@@ -1244,6 +1254,88 @@ function cargarProductos(categoria = 'todos', ordenPrecio = '') {
             abrirModalProducto(productoId);
         });
     });
+    
+    // Renderizar controles de paginación
+    renderizarPaginacion(categoria, ordenPrecio, pagina);
+}
+
+// Función para renderizar controles de paginación
+function renderizarPaginacion(categoria, ordenPrecio, pagina) {
+    const totalProductos = productosFiltrados.length;
+    const totalPaginas = Math.ceil(totalProductos / PRODUCTOS_POR_PAGINA);
+    
+    // Crear contenedor de paginación si no existe
+    let paginacionContainer = document.getElementById('paginacion-container');
+    if (!paginacionContainer) {
+        paginacionContainer = document.createElement('div');
+        paginacionContainer.id = 'paginacion-container';
+        paginacionContainer.className = 'paginacion-container';
+        document.getElementById('productos-container').parentNode.appendChild(paginacionContainer);
+    }
+    
+    // Limpiar contenido anterior
+    paginacionContainer.innerHTML = '';
+    
+    // No mostrar paginación si hay una página o menos
+    if (totalPaginas <= 1) {
+        return;
+    }
+    
+    // Crear controles de paginación
+    let paginacionHTML = `
+        <div class="paginacion-info">
+            Mostrando ${((pagina - 1) * PRODUCTOS_POR_PAGINA) + 1}-${Math.min(pagina * PRODUCTOS_POR_PAGINA, totalProductos)} de ${totalProductos} productos
+        </div>
+        <div class="paginacion-controls">
+    `;
+    
+    // Botón "Anterior"
+    if (pagina > 1) {
+        paginacionHTML += `<button class="paginacion-btn" onclick="cambiarPagina(${pagina - 1}, '${categoria}', '${ordenPrecio}')">« Anterior</button>`;
+    }
+    
+    // Números de página
+    const inicioPagina = Math.max(1, pagina - 2);
+    const finPagina = Math.min(totalPaginas, pagina + 2);
+    
+    if (inicioPagina > 1) {
+        paginacionHTML += `<button class="paginacion-btn" onclick="cambiarPagina(1, '${categoria}', '${ordenPrecio}')">1</button>`;
+        if (inicioPagina > 2) {
+            paginacionHTML += `<span class="paginacion-ellipsis">...</span>`;
+        }
+    }
+    
+    for (let i = inicioPagina; i <= finPagina; i++) {
+        const claseActiva = i === pagina ? 'paginacion-btn activa' : 'paginacion-btn';
+        paginacionHTML += `<button class="${claseActiva}" onclick="cambiarPagina(${i}, '${categoria}', '${ordenPrecio}')">${i}</button>`;
+    }
+    
+    if (finPagina < totalPaginas) {
+        if (finPagina < totalPaginas - 1) {
+            paginacionHTML += `<span class="paginacion-ellipsis">...</span>`;
+        }
+        paginacionHTML += `<button class="paginacion-btn" onclick="cambiarPagina(${totalPaginas}, '${categoria}', '${ordenPrecio}')">${totalPaginas}</button>`;
+    }
+    
+    // Botón "Siguiente"
+    if (pagina < totalPaginas) {
+        paginacionHTML += `<button class="paginacion-btn" onclick="cambiarPagina(${pagina + 1}, '${categoria}', '${ordenPrecio}')">Siguiente »</button>`;
+    }
+    
+    paginacionHTML += `</div>`;
+    
+    paginacionContainer.innerHTML = paginacionHTML;
+}
+
+// Función para cambiar de página
+function cambiarPagina(nuevaPagina, categoria, ordenPrecio) {
+    paginaActual = nuevaPagina;
+    categoriaActual = categoria;
+    ordenPrecioActual = ordenPrecio;
+    cargarProductos(categoria, ordenPrecio, nuevaPagina);
+    
+    // Scroll hacia arriba
+    document.getElementById('productos-container').scrollIntoView({ behavior: 'smooth' });
 }
 
 // Filtrar productos por categoría
@@ -1260,7 +1352,8 @@ document.querySelectorAll('.filtro-btn').forEach(btn => {
         // Filtrar productos
         const categoria = this.getAttribute('data-categoria');
         categoriaActual = categoria;
-        cargarProductos(categoria, ordenPrecioActual);
+        paginaActual = 1; // Reiniciar paginación
+        cargarProductos(categoria, ordenPrecioActual, 1);
     });
 });
 
@@ -1293,7 +1386,8 @@ function navegarACategoria(categoria) {
 // Filtrar por precio
 document.getElementById('ordenPrecio').addEventListener('change', function() {
     ordenPrecioActual = this.value;
-    cargarProductos(categoriaActual, ordenPrecioActual);
+    paginaActual = 1; // Reiniciar paginación
+    cargarProductos(categoriaActual, ordenPrecioActual, 1);
 });
 
 // Modal de confirmación

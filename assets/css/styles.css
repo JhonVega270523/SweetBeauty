@@ -406,6 +406,13 @@ nav ul li a:hover {
     transform: translateY(-5px);
 }
 
+/* Desactivar animación hover en móvil */
+@media (max-width: 768px) {
+    .producto-card:hover {
+        transform: none;
+    }
+}
+
 .producto-img {
     height: 300px;
     background-color: var(--morado-claro);
@@ -2046,6 +2053,73 @@ footer {
 
 .punto-movil.activo {
     background-color: #f48fb1;
+}
+
+/* Estilos para paginación */
+.paginacion-container {
+    margin: 30px 0;
+    text-align: center;
+    padding: 20px;
+}
+
+.paginacion-info {
+    margin-bottom: 15px;
+    color: #666;
+    font-size: 14px;
+}
+
+.paginacion-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.paginacion-btn {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    background-color: white;
+    color: #333;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    min-width: 40px;
+}
+
+.paginacion-btn:hover {
+    background-color: #f8f8f8;
+    border-color: #f48fb1;
+}
+
+.paginacion-btn.activa {
+    background-color: #f48fb1;
+    color: white;
+    border-color: #f48fb1;
+}
+
+.paginacion-ellipsis {
+    padding: 8px 4px;
+    color: #666;
+    font-size: 14px;
+}
+
+/* Responsive para paginación */
+@media (max-width: 768px) {
+    .paginacion-controls {
+        gap: 3px;
+    }
+    
+    .paginacion-btn {
+        padding: 6px 10px;
+        font-size: 12px;
+        min-width: 35px;
+    }
+    
+    .paginacion-info {
+        font-size: 12px;
+    }
 }
 
 /* Estilos específicos para móvil - dimensiones consistentes */
