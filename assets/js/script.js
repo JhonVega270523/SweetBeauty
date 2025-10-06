@@ -11,7 +11,7 @@ const productos = [
         tallas: ["S", "M", "L"]
     },
     {
-        id: 13,
+        id: 2,
         nombre: "Crop Top con Ligueros",
         descripcion: "Crop top sensual con ligueros, perfecto para ocasiones especiales.",
         precio: 75000,
@@ -20,7 +20,7 @@ const productos = [
         tallas: ["S", "M", "L"]
     },
     {
-        id: 14,
+        id: 3,
         nombre: "Conjunto Lui",
         descripcion: "Conjunto de lencería moderno y elegante con diseño exclusivo.",
         precio: 62000,
@@ -28,9 +28,144 @@ const productos = [
         imagenes: ["assets/images/3.jpeg", "assets/images/3.2.jpeg"],
         tallas: ["S", "M", "L", "XL"]
     },
+    {
+        id: 4,
+        nombre: "Conjunto Animal Print Brillos",
+        descripcion: "Conjunto de lencería con estampado animal y detalles brillantes, talla única.",
+        precio: 39000,
+        categoria: "lenceria",
+        imagen: "assets/images/4.jpeg",
+        tallas: ["Única"]
+    },
+    {
+        id: 5,
+        nombre: "Conjunto Gerania",
+        descripcion: "Conjunto de lencería con diseño floral elegante y cómodo.",
+        precio: 0,
+        categoria: "lenceria",
+        imagen: "assets/images/5.jpeg",
+        tallas: ["S", "M", "L", "XL"]
+    },
+    {
+        id: 6,
+        nombre: "Conjunto Varilla",
+        descripcion: "Conjunto de lencería con varillas para mayor soporte y comodidad.",
+        precio: 0,
+        categoria: "lenceria",
+        imagen: "assets/images/6.jpeg",
+        tallas: ["32", "34", "36", "38"]
+    },
+    {
+        id: 7,
+        nombre: "Abigail",
+        descripcion: "Conjunto de lencería elegante y sofisticado con diseño exclusivo.",
+        precio: 35000,
+        categoria: "lenceria",
+        imagenes: ["assets/images/7.jpeg", "assets/images/7.2.jpeg", "assets/images/7.3.jpeg"],
+        tallas: ["Única"]
+    },
+    {
+        id: 8,
+        nombre: "Mora Brasier",
+        descripcion: "Brasier de lencería con diseño elegante y cómodo.",
+        precio: 35000,
+        categoria: "lenceria",
+        imagenes: ["assets/images/8.jpeg", "assets/images/8.2.jpeg"],
+        tallas: ["Única"]
+    },
+    {
+        id: 9,
+        nombre: "Conjunto con Liguero",
+        descripcion: "Conjunto de lencería sensual con liguero incluido.",
+        precio: 52000,
+        categoria: "lenceria",
+        imagen: "assets/images/9.jpeg",
+        tallas: ["S", "M", "L", "XL"]
+    },
+    {
+        id: 10,
+        nombre: "Corset Sonia",
+        descripcion: "Corset de lencería elegante con diseño exclusivo Sonia.",
+        precio: 75000,
+        categoria: "lenceria",
+        imagenes: ["assets/images/10.jpeg", "assets/images/10.2.jpeg"],
+        tallas: ["S", "M", "L", "XL"]
+    },
+    {
+        id: 11,
+        nombre: "Conjunto Alejandra",
+        descripcion: "Conjunto de lencería con diseño moderno y elegante Alejandra.",
+        precio: 45000,
+        categoria: "lenceria",
+        imagen: "assets/images/11.jpeg",
+        tallas: ["S", "M", "L", "XL"]
+    },
+    {
+        id: 12,
+        nombre: "Set Lentejuelas Davila",
+        descripcion: "Set de lencería con lentejuelas elegantes y brillantes.",
+        precio: 57000,
+        categoria: "lenceria",
+        imagen: "assets/images/12.jpeg",
+        tallas: ["32", "34", "36"]
+    },
+    {
+        id: 13,
+        nombre: "Conjunto Sofia",
+        descripcion: "Conjunto de lencería sofisticado con diseño exclusivo Sofia.",
+        precio: 49000,
+        categoria: "lenceria",
+        imagen: "assets/images/13.jpeg",
+        tallas: ["S", "M", "L", "XL"]
+    },
+    {
+        id: 14,
+        nombre: "Conjunto Copa Braleth Anik",
+        descripcion: "Conjunto de lencería con copa Braleth y diseño Anik.",
+        precio: 55000,
+        categoria: "lenceria",
+        imagenes: ["assets/images/14.jpeg", "assets/images/14.2.jpeg"],
+        tallas: ["S", "M", "L", "XL"]
+    },
+    {
+        id: 15,
+        nombre: "Corset con Panty Copa y Varillas",
+        descripcion: "Corset de lencería con panty, copa y varillas para mayor soporte.",
+        precio: 80000,
+        categoria: "lenceria",
+        imagenes: ["assets/images/15.jpeg", "assets/images/15.2.jpeg"],
+        tallas: ["S", "M", "L"]
+    },
+    {
+        id: 16,
+        nombre: "Corset Varilla SOL",
+        descripcion: "Corset de lencería con varillas y diseño SOL exclusivo.",
+        precio: 67000,
+        categoria: "lenceria",
+        imagen: "assets/images/16.jpeg",
+        tallas: ["S", "M", "L", "XL"]
+    },
+    {
+        id: 17,
+        nombre: "Conjunto",
+        descripcion: "Conjunto de lencería elegante y cómodo.",
+        precio: 55000,
+        categoria: "lenceria",
+        imagen: "assets/images/17.jpeg",
+        tallas: ["S", "M", "L", "XL"]
+    },
+    {
+        id: 18,
+        nombre: "Set Brillos",
+        descripcion: "Set de lencería con detalles brillantes y elegantes.",
+        precio: 35000,
+        categoria: "lenceria",
+        imagen: "assets/images/18.jpeg",
+        tallas: ["S", "M"]
+    },
     // Perfumes
     {
-        id: 3,
+        id: 19,
         nombre: "Perfume Floral Exclusivo",
         descripcion: "Fragancia floral suave y duradera para el día a día.",
         precio: 125000,
@@ -38,7 +173,7 @@ const productos = [
         imagen: "🌸"
     },
     {
-        id: 4,
+        id: 20,
         nombre: "Eau de Parfum Nocturno",
         descripcion: "Fragancia intensa y seductora para ocasiones especiales.",
         precio: 180000,
@@ -47,7 +182,7 @@ const productos = [
     },
     // Accesorios
     {
-        id: 5,
+        id: 21,
         nombre: "Collar de Perlas Elegante",
         descripcion: "Collar de perlas naturales con dije de plata.",
         precio: 125000,
@@ -55,7 +190,7 @@ const productos = [
         imagen: "📿"
     },
     {
-        id: 6,
+        id: 22,
         nombre: "Bolso de Mano Trendy",
         descripcion: "Bolso de mano con diseño moderno y espacio amplio.",
         precio: 145000,
@@ -64,7 +199,7 @@ const productos = [
     },
     // Maquillaje
     {
-        id: 7,
+        id: 23,
         nombre: "Kit de Maquillaje Profesional",
         descripcion: "Kit completo con sombras, labiales y base de alta calidad.",
         precio: 189000,
@@ -72,7 +207,7 @@ const productos = [
         imagen: "💄"
     },
     {
-        id: 8,
+        id: 24,
         nombre: "Paleta de Sombras Premium",
         descripcion: "Paleta con 12 sombras de colores neutros y vibrantes.",
         precio: 95000,
@@ -81,7 +216,7 @@ const productos = [
     },
     // Pijamas
     {
-        id: 9,
+        id: 25,
         nombre: "Pijama de Seda Comfort",
         descripcion: "Pijama de seda suave para noches cómodas y elegantes.",
         precio: 210000,
@@ -89,7 +224,7 @@ const productos = [
         imagen: "👘"
     },
     {
-        id: 10,
+        id: 26,
         nombre: "Conjunto Pijama Algodón",
         descripcion: "Pijama de algodón 100% orgánico, cómodo y transpirable.",
         precio: 75000,
@@ -98,7 +233,7 @@ const productos = [
     },
     // Vestidos de Baño
     {
-        id: 11,
+        id: 27,
         nombre: "Bikini Elegante",
         descripcion: "Bikini de dos piezas con diseño moderno y ajuste perfecto.",
         precio: 135000,
@@ -106,7 +241,7 @@ const productos = [
         imagen: "👙"
     },
     {
-        id: 12,
+        id: 28,
         nombre: "Traje de Baño Entero",
         descripcion: "Traje de baño de una pieza con corte clásico y elegante.",
         precio: 155000,

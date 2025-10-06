@@ -383,7 +383,7 @@ nav ul li a:hover {
 }
 
 .producto-img {
-    height: 450px;
+    height: 300px;
     background-color: var(--morado-claro);
     display: flex;
     align-items: center;
@@ -1525,7 +1525,7 @@ footer {
     }
     
     .producto-img {
-        height: 320px;
+        height: 250px;
         font-size: 1.8rem;
     }
     
@@ -1700,7 +1700,7 @@ footer {
     }
     
     .producto-img {
-        height: 350px;
+        height: 280px;
         font-size: 2rem;
     }
     
@@ -1869,8 +1869,8 @@ footer {
 }
 
 .producto-modal-img {
-    flex: 1;
-    height: 600px;
+    flex: 2;
+    height: 400px;
     background-color: var(--morado-claro);
     display: flex;
     align-items: center;
@@ -1898,12 +1898,14 @@ footer {
 
 .producto-modal-info {
     flex: 1;
+    min-width: 300px;
 }
 
 .producto-modal-info h2 {
     color: #9c27b0;
     font-size: 2rem;
     margin-bottom: 15px;
+    text-align: center;
 }
 
 .producto-modal-info p {
@@ -1911,6 +1913,7 @@ footer {
     font-size: 1.1rem;
     line-height: 1.6;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .producto-modal-precio {
@@ -1918,6 +1921,7 @@ footer {
     font-weight: bold;
     color: #9c27b0;
     margin-bottom: 25px;
+    text-align: center;
 }
 
 .btn-comprar-modal {
@@ -1947,7 +1951,7 @@ footer {
     }
     
     .producto-modal-img {
-        height: 500px;
+        height: 400px;
         font-size: 3rem;
     }
     
