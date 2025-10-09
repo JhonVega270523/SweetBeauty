@@ -420,6 +420,24 @@ nav ul li a:hover {
     gap: 30px;
 }
 
+/* Ajustes especiales para productos de perfumes */
+.productos-grid.perfumes-layout .producto-img {
+    height: 280px; /* altura reducida para perfumes */
+}
+
+.productos-grid.perfumes-layout .producto-imagen {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* ajustar sin recortar */
+    object-position: center;
+}
+
+@media (max-width: 768px) {
+    .productos-grid.perfumes-layout .producto-img {
+        height: 250px; /* altura móvil reducida */
+    }
+}
+
 .producto-card {
     background-color: var(--blanco);
     border-radius: 15px;
@@ -1999,6 +2017,22 @@ footer {
     color: var(--morado-pastel);
     border-radius: 15px;
     overflow: hidden;
+}
+
+/* Ajustes especiales para perfumes en modales */
+.producto-modal-img.perfumes-modal .modal-producto-imagen {
+    object-fit: contain !important;
+    object-position: center !important;
+}
+
+.producto-modal-img.perfumes-modal .modal-carrusel .carrusel-img {
+    object-fit: contain !important;
+    object-position: center !important;
+}
+
+.producto-modal-img.perfumes-modal .modal-producto-imagen-movil {
+    object-fit: contain !important;
+    object-position: center !important;
 }
 
 .modal-producto-imagen {

@@ -604,23 +604,7 @@ const productos = [
         imagen: "assets/images/67.jpeg",
         tallas: ["S", "M", "L", "XL"]
     },
-    // Perfumes
-    {
-        id: 68,
-        nombre: "Perfume Floral Exclusivo",
-        descripcion: "Fragancia floral suave y duradera para el día a día.",
-        precio: 125000,
-        categoria: "perfumes",
-        imagen: "🌸"
-    },
-    {
-        id: 69,
-        nombre: "Eau de Parfum Nocturno",
-        descripcion: "Fragancia intensa y seductora para ocasiones especiales.",
-        precio: 180000,
-        categoria: "perfumes",
-        imagen: "🌙"
-    },
+    // Perfumes (ejemplos eliminados)
     // Accesorios
     {
         id: 70,
@@ -989,7 +973,7 @@ productos.push(
         precio: 68000,
         categoria: "lenceria",
         subcategoria: "disfraces",
-        imagen: "assets/images/99.jpeg",
+        imagenes: ["assets/images/99.jpeg", "assets/images/99.2.jpeg", "assets/images/99.3.jpeg"],
         tallas: ["Única"]
     },
     {
@@ -1024,14 +1008,34 @@ productos.push(
     },
     {
         id: 113,
-        nombre: "Conejita",
-        descripcion: "Disfraz de conejita.",
+        nombre: "Conejita Rosada",
+        descripcion: "Disfraz de conejita en tono rosado.",
         precio: 68000,
         categoria: "lenceria",
         subcategoria: "disfraces",
-        imagen: "assets/images/103.jpeg",
+        imagenes: ["assets/images/103.jpeg", "assets/images/103.2.jpeg", "assets/images/103.3.jpeg"],
         tallas: ["Única"]
     }
+);
+
+// Nuevos productos - Categoría: Perfumes (solo nombre, precio, imagen)
+productos.push(
+    { id: 114, nombre: "Splash Chic", precio: 25000, categoria: "perfumes", imagen: "assets/images/104.jpeg" },
+    { id: 115, nombre: "Splash Seducción", precio: 25000, categoria: "perfumes", imagen: "assets/images/105.jpeg" },
+    { id: 116, nombre: "Splash Blue Kiss", precio: 25000, categoria: "perfumes", imagen: "assets/images/106.jpeg" },
+    { id: 117, nombre: "Splash Coco Nut", precio: 25000, categoria: "perfumes", imagen: "assets/images/107.jpeg" },
+    { id: 118, nombre: "Splash Sandía", precio: 25000, categoria: "perfumes", imagen: "assets/images/108.jpeg" },
+    { id: 119, nombre: "Exfoliante Corporal Bon Bon", precio: 25000, categoria: "perfumes", imagen: "assets/images/109.jpeg" },
+    { id: 120, nombre: "Iluminador Gold", precio: 25000, categoria: "perfumes", imagen: "assets/images/110.jpeg" },
+    { id: 121, nombre: "Exfoliante Corporal Exploción Tropical", precio: 25000, categoria: "perfumes", imagen: "assets/images/111.jpeg" },
+    { id: 122, nombre: "Mantequilla Chic", precio: 25000, categoria: "perfumes", imagen: "assets/images/112.jpeg" },
+    { id: 123, nombre: "Mantequilla Sandía", precio: 25000, categoria: "perfumes", imagen: "assets/images/113.jpeg" },
+    { id: 124, nombre: "Mantequilla Coco Nut", precio: 25000, categoria: "perfumes", imagen: "assets/images/114.jpeg" },
+    { id: 125, nombre: "Iluminador Pink", precio: 25000, categoria: "perfumes", imagen: "assets/images/115.jpeg" },
+    { id: 126, nombre: "Mantequilla Seducción", precio: 25000, categoria: "perfumes", imagen: "assets/images/116.jpeg" },
+    { id: 127, nombre: "Iluminador Bronze", precio: 25000, categoria: "perfumes", imagen: "assets/images/117.jpeg" },
+    { id: 128, nombre: "Mantequilla Blue Kiss", precio: 25000, categoria: "perfumes", imagen: "assets/images/118.jpeg" },
+    { id: 129, nombre: "Exfoliante Corporal Sandía", precio: 25000, categoria: "perfumes", imagen: "assets/images/119.jpeg" }
 );
 
 // Variables globales
@@ -1574,6 +1578,14 @@ function abrirModalProducto(productoId) {
     if (producto) {
         // Manejar imagen real, múltiples imágenes o emoji
         const modalImg = document.getElementById('productoModalImg');
+        
+        // Añadir clase especial para perfumes
+        if (producto.categoria === 'perfumes') {
+            modalImg.classList.add('perfumes-modal');
+        } else {
+            modalImg.classList.remove('perfumes-modal');
+        }
+        
         if (producto.imagenes && producto.imagenes.length > 1) {
             // Detectar si es móvil
             const esMovil = window.innerWidth <= 768;
