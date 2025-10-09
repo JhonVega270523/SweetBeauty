@@ -357,6 +357,32 @@ nav ul li a:hover {
     margin-bottom: 10px;
 }
 
+/* Botón Disfraces al lado del selector */
+.btn-disfraces {
+    background-color: #f48fb1;
+    color: var(--blanco);
+    border: none;
+    padding: 10px 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: none; /* Oculto por defecto, se muestra solo en Lencería */
+}
+
+.btn-disfraces:hover {
+    background-color: #ba68c8;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .btn-disfraces {
+        width: 100%;
+        text-align: center;
+    }
+}
+
 .filtros-precio label {
     color: var(--texto-oscuro);
     font-weight: 600;

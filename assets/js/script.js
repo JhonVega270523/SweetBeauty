@@ -926,12 +926,73 @@ const productos = [
     }
 ];
 
+// Productos de subcategoría: Disfraces (dentro de Lencería)
+productos.push(
+    {
+        id: 104,
+        nombre: "Disfraz Enfermera",
+        descripcion: "Set de disfraz estilo enfermera.",
+        precio: 68000,
+        categoria: "lenceria",
+        subcategoria: "disfraces",
+        imagenes: ["assets/images/94.jpeg", "assets/images/94.2.jpeg"],
+        tallas: ["Única"]
+    },
+    {
+        id: 105,
+        nombre: "Colegiala Rosada",
+        descripcion: "Conjunto colegiala en tono rosado.",
+        precio: 68000,
+        categoria: "lenceria",
+        subcategoria: "disfraces",
+        imagenes: ["assets/images/95.jpeg", "assets/images/95.2.jpeg"],
+        tallas: ["Única"]
+    },
+    {
+        id: 106,
+        nombre: "Monja",
+        descripcion: "Disfraz tipo monja.",
+        precio: 68000,
+        categoria: "lenceria",
+        subcategoria: "disfraces",
+        imagenes: ["assets/images/96.jpeg", "assets/images/96.2.jpeg"],
+        tallas: ["Única"]
+    },
+    {
+        id: 107,
+        nombre: "Mucama",
+        descripcion: "Set de disfraz de mucama.",
+        precio: 68000,
+        categoria: "lenceria",
+        subcategoria: "disfraces",
+        imagen: "assets/images/97.jpeg",
+        tallas: ["Única"]
+    },
+    {
+        id: 108,
+        nombre: "Vaquita",
+        descripcion: "Conjunto de disfraz de vaquita.",
+        precio: 68000,
+        categoria: "lenceria",
+        subcategoria: "disfraces",
+        imagenes: ["assets/images/98.jpeg", "assets/images/98.2.jpeg"],
+        tallas: ["Única"]
+    }
+);
+
 // Variables globales
 let categoriaActual = 'todos';
 let ordenPrecioActual = '';
 let paginaActual = 1;
 const PRODUCTOS_POR_PAGINA = 24;
 let productosFiltrados = [];
+
+// Mostrar/ocultar botón Disfraces según categoría
+function actualizarVisibilidadDisfraces() {
+    const btn = document.getElementById('btnDisfraces');
+    if (!btn) return;
+    btn.style.display = categoriaActual === 'lenceria' ? 'inline-block' : 'none';
+}
 
 // Función para inicializar carruseles automáticos
 function inicializarCarruseles() {
@@ -1173,10 +1234,21 @@ function cargarProductos(categoria = 'todos', ordenPrecio = '', pagina = 1) {
     const container = document.getElementById('productos-container');
     container.innerHTML = '';
     
-    // Filtrar productos por categoría
-    productosFiltrados = categoria === 'todos' 
-        ? [...productos] 
-        : productos.filter(p => p.categoria === categoria);
+    // Filtrar productos por categoría o subcategoría
+    if (categoria === 'todos') {
+        productosFiltrados = [...productos];
+    } else if (categoria === 'disfraces') {
+        // Subcategoría explícita: solo productos con subcategoria === 'disfraces'
+        productosFiltrados = productos.filter(p => p.subcategoria === 'disfraces');
+    } else {
+        // Filtrado normal por categoría, con excepción para Lencería:
+        // en Lencería ocultamos los que pertenezcan a la subcategoría 'disfraces'
+        if (categoria === 'lenceria') {
+            productosFiltrados = productos.filter(p => p.categoria === 'lenceria' && p.subcategoria !== 'disfraces');
+        } else {
+            productosFiltrados = productos.filter(p => p.categoria === categoria);
+        }
+    }
     
     // Aplicar ordenamiento por precio si está seleccionado
     if (ordenPrecio === 'menor-mayor') {
@@ -1354,6 +1426,7 @@ document.querySelectorAll('.filtro-btn').forEach(btn => {
         categoriaActual = categoria;
         paginaActual = 1; // Reiniciar paginación
         cargarProductos(categoria, ordenPrecioActual, 1);
+        actualizarVisibilidadDisfraces();
     });
 });
 
@@ -1380,6 +1453,7 @@ function navegarACategoria(categoria) {
         // Cargar productos filtrados
         categoriaActual = categoria;
         cargarProductos(categoria, ordenPrecioActual);
+        actualizarVisibilidadDisfraces();
     }, 500);
 }
 
@@ -1389,6 +1463,20 @@ document.getElementById('ordenPrecio').addEventListener('change', function() {
     paginaActual = 1; // Reiniciar paginación
     cargarProductos(categoriaActual, ordenPrecioActual, 1);
 });
+
+// Botón rápido para subcategoría Disfraces (dentro de Lencería)
+const btnDisfraces = document.getElementById('btnDisfraces');
+if (btnDisfraces) {
+    btnDisfraces.addEventListener('click', function() {
+        // Quitar selección de los botones de la barra lateral
+        document.querySelectorAll('.filtro-btn').forEach(b => b.classList.remove('active'));
+        categoriaActual = 'disfraces';
+        paginaActual = 1;
+        cargarProductos('disfraces', ordenPrecioActual, 1);
+        // Hacer scroll al inicio del listado
+        document.getElementById('productos').scrollIntoView({ behavior: 'smooth' });
+    });
+}
 
 // Modal de confirmación
 const confirmacionModal = document.getElementById('confirmacionModal');
@@ -1732,6 +1820,7 @@ function abrirWhatsApp(numero) {
 // Sistema de calificación con estrellas
 document.addEventListener('DOMContentLoaded', function() {
     cargarProductos();
+    actualizarVisibilidadDisfraces();
     inicializarCalificacionEstrellas();
     inicializarMenuHamburguesa();
 });
