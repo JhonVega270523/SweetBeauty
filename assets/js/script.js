@@ -968,7 +968,7 @@ productos.push(
 productos.push(
     {
         id: 109,
-        nombre: "Blanca nieves",
+        nombre: "Blanca Nieves",
         descripcion: "Disfraz inspirado en Blanca Nieves.",
         precio: 68000,
         categoria: "lenceria",
@@ -1021,13 +1021,13 @@ productos.push(
 // Nuevos productos - Categoría: Perfumes (solo nombre, precio, imagen)
 productos.push(
     { id: 114, nombre: "Splash Chic", precio: 25000, categoria: "perfumes", imagen: "assets/images/104.jpeg" },
-    { id: 115, nombre: "Splash Seducción", precio: 25000, categoria: "perfumes", imagen: "assets/images/105.jpeg" },
-    { id: 116, nombre: "Splash Blue Kiss", precio: 25000, categoria: "perfumes", imagen: "assets/images/106.jpeg" },
-    { id: 117, nombre: "Splash Coco Nut", precio: 25000, categoria: "perfumes", imagen: "assets/images/107.jpeg" },
-    { id: 118, nombre: "Splash Sandía", precio: 25000, categoria: "perfumes", imagen: "assets/images/108.jpeg" },
-    { id: 119, nombre: "Exfoliante Corporal Bon Bon", precio: 25000, categoria: "perfumes", imagen: "assets/images/109.jpeg" },
+    { id: 115, nombre: "Splash Seducción", precio: 25000, categoria: "perfumes", imagen: "assets/images/105.jpg" },
+    { id: 116, nombre: "Splash Blue Kiss", precio: 25000, categoria: "perfumes", imagen: "assets/images/106.jpg" },
+    { id: 117, nombre: "Splash Coco Nut", precio: 25000, categoria: "perfumes", imagen: "assets/images/107.jpg" },
+    { id: 118, nombre: "Splash Sandía", precio: 25000, categoria: "perfumes", imagen: "assets/images/108.jpg" },
+    { id: 119, nombre: "Exfoliante Corporal Bon Bon", precio: 25000, categoria: "perfumes", imagen: "assets/images/109.jpg" },
     { id: 120, nombre: "Iluminador Gold", precio: 25000, categoria: "perfumes", imagen: "assets/images/110.jpeg" },
-    { id: 121, nombre: "Exfoliante Corporal Exploción Tropical", precio: 25000, categoria: "perfumes", imagen: "assets/images/111.jpeg" },
+    { id: 121, nombre: "Exfoliante Corporal Exploción Tropical", precio: 25000, categoria: "perfumes", imagen: "assets/images/111.jpg" },
     { id: 122, nombre: "Mantequilla Chic", precio: 25000, categoria: "perfumes", imagen: "assets/images/112.jpeg" },
     { id: 123, nombre: "Mantequilla Sandía", precio: 25000, categoria: "perfumes", imagen: "assets/images/113.jpeg" },
     { id: 124, nombre: "Mantequilla Coco Nut", precio: 25000, categoria: "perfumes", imagen: "assets/images/114.jpeg" },
@@ -1035,7 +1035,7 @@ productos.push(
     { id: 126, nombre: "Mantequilla Seducción", precio: 25000, categoria: "perfumes", imagen: "assets/images/116.jpeg" },
     { id: 127, nombre: "Iluminador Bronze", precio: 25000, categoria: "perfumes", imagen: "assets/images/117.jpeg" },
     { id: 128, nombre: "Mantequilla Blue Kiss", precio: 25000, categoria: "perfumes", imagen: "assets/images/118.jpeg" },
-    { id: 129, nombre: "Exfoliante Corporal Sandía", precio: 25000, categoria: "perfumes", imagen: "assets/images/119.jpeg" }
+    { id: 129, nombre: "Exfoliante Corporal Sandía", precio: 25000, categoria: "perfumes", imagen: "assets/images/119.jpg" }
 );
 
 // Variables globales
