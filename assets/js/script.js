@@ -980,6 +980,60 @@ productos.push(
     }
 );
 
+// Más disfraces
+productos.push(
+    {
+        id: 109,
+        nombre: "Blanca nieves",
+        descripcion: "Disfraz inspirado en Blanca Nieves.",
+        precio: 68000,
+        categoria: "lenceria",
+        subcategoria: "disfraces",
+        imagen: "assets/images/99.jpeg",
+        tallas: ["Única"]
+    },
+    {
+        id: 110,
+        nombre: "Jessy",
+        descripcion: "Disfraz Jessy con tiras graduables.",
+        precio: 68000,
+        categoria: "lenceria",
+        subcategoria: "disfraces",
+        imagen: "assets/images/100.jpeg",
+        tallas: ["Graduable"]
+    },
+    {
+        id: 111,
+        nombre: "Caperucita Roja",
+        descripcion: "Disfraz clásico de Caperucita Roja.",
+        precio: 68000,
+        categoria: "lenceria",
+        subcategoria: "disfraces",
+        imagen: "assets/images/101.jpeg",
+        tallas: ["Graduable"]
+    },
+    {
+        id: 112,
+        nombre: "Mucama Rosada",
+        descripcion: "Disfraz de mucama en color rosado.",
+        precio: 68000,
+        categoria: "lenceria",
+        subcategoria: "disfraces",
+        imagen: "assets/images/102.jpeg",
+        tallas: ["Única"]
+    },
+    {
+        id: 113,
+        nombre: "Conejita",
+        descripcion: "Disfraz de conejita.",
+        precio: 68000,
+        categoria: "lenceria",
+        subcategoria: "disfraces",
+        imagen: "assets/images/103.jpeg",
+        tallas: ["Única"]
+    }
+);
+
 // Variables globales
 let categoriaActual = 'todos';
 let ordenPrecioActual = '';
