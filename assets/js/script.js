@@ -1021,21 +1021,35 @@ productos.push(
 // Nuevos productos - Categoría: Perfumes (solo nombre, precio, imagen)
 productos.push(
     { id: 114, nombre: "Splash Chic", precio: 25000, categoria: "perfumes", imagen: "assets/images/104.jpeg" },
-    { id: 115, nombre: "Splash Seducción", precio: 25000, categoria: "perfumes", imagen: "assets/images/105.jpg" },
-    { id: 116, nombre: "Splash Blue Kiss", precio: 25000, categoria: "perfumes", imagen: "assets/images/106.jpg" },
-    { id: 117, nombre: "Splash Coco Nut", precio: 25000, categoria: "perfumes", imagen: "assets/images/107.jpg" },
-    { id: 118, nombre: "Splash Sandía", precio: 25000, categoria: "perfumes", imagen: "assets/images/108.jpg" },
-    { id: 119, nombre: "Exfoliante Corporal Bon Bon", precio: 25000, categoria: "perfumes", imagen: "assets/images/109.jpg" },
-    { id: 120, nombre: "Iluminador Gold", precio: 25000, categoria: "perfumes", imagen: "assets/images/110.jpeg" },
-    { id: 121, nombre: "Exfoliante Corporal Exploción Tropical", precio: 25000, categoria: "perfumes", imagen: "assets/images/111.jpg" },
-    { id: 122, nombre: "Mantequilla Chic", precio: 25000, categoria: "perfumes", imagen: "assets/images/112.jpeg" },
-    { id: 123, nombre: "Mantequilla Sandía", precio: 25000, categoria: "perfumes", imagen: "assets/images/113.jpeg" },
-    { id: 124, nombre: "Mantequilla Coco Nut", precio: 25000, categoria: "perfumes", imagen: "assets/images/114.jpeg" },
-    { id: 125, nombre: "Iluminador Pink", precio: 25000, categoria: "perfumes", imagen: "assets/images/115.jpeg" },
-    { id: 126, nombre: "Mantequilla Seducción", precio: 25000, categoria: "perfumes", imagen: "assets/images/116.jpeg" },
-    { id: 127, nombre: "Iluminador Bronze", precio: 25000, categoria: "perfumes", imagen: "assets/images/117.jpeg" },
-    { id: 128, nombre: "Mantequilla Blue Kiss", precio: 25000, categoria: "perfumes", imagen: "assets/images/118.jpeg" },
-    { id: 129, nombre: "Exfoliante Corporal Sandía", precio: 25000, categoria: "perfumes", imagen: "assets/images/119.jpg" }
+    { id: 115, nombre: "Splash Seducción", precio: 25000, categoria: "perfumes", imagen: "assets/images/105.jpeg" },
+    { id: 116, nombre: "Splash Blue Kiss", precio: 25000, categoria: "perfumes", imagen: "assets/images/106.jpeg" },
+    { id: 117, nombre: "Splash Coco Nut", precio: 25000, categoria: "perfumes", imagen: "assets/images/107.jpeg" },
+    { id: 118, nombre: "Splash Sandía", precio: 25000, categoria: "perfumes", imagen: "assets/images/108.jpeg" },
+    { id: 119, nombre: "Splash Bon Bon", precio: 25000, categoria: "perfumes", imagen: "assets/images/109.jpeg" },
+    { id: 120, nombre: "Exfoliante Corporal Bon Bon", precio: 25000, categoria: "perfumes", imagen: "assets/images/110.jpeg" },
+    { id: 121, nombre: "Exfoliante Corporal Sandía", precio: 25000, categoria: "perfumes", imagen: "assets/images/111.jpeg" },
+    { id: 122, nombre: "Exfoliante Corporal Exploción Tropical", precio: 25000, categoria: "perfumes", imagen: "assets/images/112.jpeg" },
+    { id: 123, nombre: "Mantequilla Chic", precio: 25000, categoria: "perfumes", imagen: "assets/images/113.jpeg" },
+    { id: 124, nombre: "Mantequilla Sandía", precio: 25000, categoria: "perfumes", imagen: "assets/images/114.jpeg" },
+    { id: 125, nombre: "Mantequilla Coco Nut", precio: 25000, categoria: "perfumes", imagen: "assets/images/115.jpeg" },
+    { id: 126, nombre: "Mantequilla Blue Kiss", precio: 25000, categoria: "perfumes", imagen: "assets/images/116.jpeg" },
+    { id: 127, nombre: "Mantequilla Seducción", precio: 25000, categoria: "perfumes", imagen: "assets/images/117.jpeg" },
+    { id: 128, nombre: "Iluminador Pink", precio: 25000, categoria: "perfumes", imagen: "assets/images/118.jpeg" },
+    { id: 129, nombre: "Iluminador Gold", precio: 25000, categoria: "perfumes", imagen: "assets/images/119.jpeg" },
+    { id: 130, nombre: "Iluminador Bronze", precio: 25000, categoria: "perfumes", imagen: "assets/images/120.jpeg" },
+    // Nuevos mini splash
+    { id: 131, nombre: "Mini Splash Blue Kiss", precio: 16000, categoria: "perfumes", imagen: "assets/images/122.jpeg" },
+    { id: 132, nombre: "Mini Splash Coco Nut", precio: 16000, categoria: "perfumes", imagen: "assets/images/123.jpeg" },
+    { id: 133, nombre: "Mini Splash Sandía", precio: 16000, categoria: "perfumes", imagen: "assets/images/124.jpeg" },
+    { id: 134, nombre: "Mini Splash Bon Bon", precio: 16000, categoria: "perfumes", imagen: "assets/images/125.jpeg" },
+    { id: 135, nombre: "Mini Splash Seducción", precio: 16000, categoria: "perfumes", imagen: "assets/images/126.jpeg" },
+    // Nuevos splash infantiles
+    { id: 136, nombre: "Splash Infantil", precio: 12000, categoria: "perfumes", imagen: "assets/images/127.jpeg" },
+    { id: 137, nombre: "Splash Unicornio", precio: 12000, categoria: "perfumes", imagen: "assets/images/128.jpeg" },
+    { id: 138, nombre: "Splash Capricho", precio: 12000, categoria: "perfumes", imagen: "assets/images/129.jpeg" },
+    { id: 139, nombre: "Splash Princess", precio: 12000, categoria: "perfumes", imagen: "assets/images/130.jpeg" },
+    { id: 140, nombre: "Splash Bon Bon Infantil", precio: 12000, categoria: "perfumes", imagen: "assets/images/131.jpeg" },
+    { id: 141, nombre: "Splash Sirena", precio: 12000, categoria: "perfumes", imagen: "assets/images/132.jpeg" }
 );
 
 // Variables globales
